@@ -86,6 +86,22 @@ $theme-colors: (
 
   "error": $error,
 );
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: $spacer * .25,  // 0.25rem
+  2: $spacer * .5,   // 0.5rem
+  3: $spacer,        // 1rem
+  4: $spacer * 1.5,  // 1.5rem
+  5: $spacer * 3,    // 3rem
+  6: $spacer * .75,  // 0.75rem (新增)
+  7: $spacer * 2,    // 2rem (新增)
+  8: $spacer * 2.5,  // 2.5rem (新增)
+  9: $spacer * 4,  // 4rem (新增)
+  10: $spacer * 5,  // 5rem (新增)
+);
 //客製化結束
 
 
