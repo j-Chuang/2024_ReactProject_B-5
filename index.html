@@ -6,60 +6,582 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
 
-    <script type="module" crossorigin src="/2024_ReactProject_B-5/assets/index-Dhmqk2fr.js"></script>
-    <link rel="stylesheet" crossorigin href="/2024_ReactProject_B-5/assets/index-fwnG-sg4.css">
+    <style>
+      body {
+        background-color: #e3f2f9;
+        overflow-x: hidden; /* 防止水平滾動條 */
+      }
+  
+      .hero {
+        background-image: url('/2024_ReactProject_B-5/assets/01_header-BQ--Jt4l.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+      }
+  
+      .container {
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+  
+      /* 修正 nav bar */
+      header {
+        background-color: #FCFCFC;
+        color: white;
+        width: 100%;
+        padding-top: 16px;
+        padding-right: 312px;
+        padding-bottom: 16px;
+        padding-left: 312px;
+        border-bottom: 1px solid #000; /* 加入底線 */
+      }
+  
+      header .nav-items a {
+        color: #22727E;
+      }
+  
+      header .nav-items a:hover {
+        color: #ffcc00;
+      }
+  
+      .main-title {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .btn-primary {
+        background-color: #00695c;
+        border: none;
+      }
+  
+      .card {
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+  
+      .card .card-title {
+        font-weight: bold;
+      }
+  
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+  
+      /* 搜尋區域 */
+      .search-section {
+        background-color: #CCE5E9;
+        padding-top: 40px;
+        padding-right: 312px;
+        padding-bottom: 40px;
+        padding-left: 312px;
+        gap: 64px;
+      }
+  
+      .search-input {
+        width: 200px;
+        margin-right: 10px;
+      }
+  
+      .search-input input {
+        width: 100%;
+      }
+  
+      .btn-primary {
+        background-color: #00695c;
+        border: none;
+        padding: 10px 20px;
+      }
+  
+      /* 拾光日誌 */
+      #journal {
+        width: 1920px;
+        height: 1174px;
+        padding-top: 120px;
+        padding-right: 312px;
+        padding-bottom: 120px;
+        padding-left: 312px;
+        gap: 80px;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .title-container h2 {
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 57.6px;
+      }
+  
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 64px;
+      }
+  
+      .left-image {
+        width: 526px;
+        height: 720px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+  
+      .middle-image {
+        width: 306px;
+        height: 355px;
+        border-radius: 8px;
+        object-fit: cover;
+        position: relative;
+        left: -100px;
+      }
+  
+      .right-text {
+        width: 526px;
+        height: 720px;
+        padding-left: 56px;
+        gap: 32px;
+      }
+  
+      .right-text h3 {
+        width: 470px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+  
+      .right-text p {
+        width: 470px;
+        height: 384px;
+        font-family: "Noto Sans TC", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+      }
+  
+      .right-text button {
+        width: 110px;
+        height: 40px;
+        padding-top: 8px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        gap: 12px;
+        border-radius: 8px;
+        border-width: 1px;
+        background-color: #00695c;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .right-text button:hover {
+        background-color: #004d40;
+      }
+  
+      #about {
+        width: 100%;
+        max-width: 1920px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-top: 80px;
+        padding-right: 312px;
+        padding-bottom: 80px;
+        padding-left: 312px;
+        background-color: #f8f9fa;
+        box-sizing: border-box;
+      }
+  
+      .about-title-container {
+        width: 192px;
+        height: 58px;
+        overflow: hidden;
+      }
+  
+      .section-1, .section-2 {
+        width: 100%;
+        max-width: 1920px;
+        display: flex;
+        gap: 12px;
+        box-sizing: border-box;
+      }
+  
+      .left-image, .right-image {
+        width: 100%;
+        max-width: 526px;
+        height: 760px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+  
+      .right-text {
+        width: 100%;
+        max-width: 636px;
+        height: 760px;
+        gap: 32px;
+        padding-left: 56px;
+      }
+  
+      .right-text p {
+        font-family: "Noto Sans TC", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #333;
+        box-sizing: border-box;
+      }
+  
+      .right-text h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #22727E;
+      }
+  
+      .right-text button {
+        background-color: #00695c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+  
+      .right-text button:hover {
+        background-color: #004d40;
+      }
+  
+      /* Adjust footer layout */
+      footer {
+        background-color: #00695c;
+        color: white;
+        padding: 40px 0;
+      }
+  
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+  
+      /* Logo and links */
+      .footer-logo-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        width: 1296px;
+        height: 120px;
+      }
+  
+      .footer-logo {
+        max-width: 200px;
+      }
+  
+      .footer-links {
+        display: flex;
+        gap: 40px;
+      }
+  
+      .footer-link {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+  
+      .footer-link:hover {
+        color: #ffcc00; /* Optional hover color */
+      }
+  
+      /* Contact Information Block */
+      .footer-contact-info {
+        width: 388px;
+        height: 208px;
+        gap: 32px;
+      }
+  
+      .footer-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 16px;
+        color: white;
+      }
+  
+      .footer-contact a {
+        color: white;
+        text-decoration: none;
+      }
+  
+      /* Social Media and Footer Text */
+      .footer-social-media {
+        width: 388px;
+        height: 80px;
+        gap: 24px;
+      }
+  
+      .footer-icons {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+  
+      .social-icon {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+  
+      footer p {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+  
+  
+    </style>
+    <script type="module" crossorigin src="/2024_ReactProject_B-5/assets/index-Wi92hbBw.js"></script>
+    <link rel="stylesheet" crossorigin href="/2024_ReactProject_B-5/assets/index-BMWI3hU6.css">
   </head>
   <body>
-    <header class="bg-grey-000">
-      <nav class="container d-flex justify-content-between align-items-center p-3">
-        <img src="/2024_ReactProject_B-5/assets/logo_green-D_Nz9I2J.png" class=".img-fluid" alt="logo">
-        <ul class="d-flex justify-content-between gap-4 align-items-center">
-          <li><a href="#" class="text-primary-700">旅途行程</a></li>
-          <li><a href="#" class="text-primary-700">拾光日誌</a></li>
-          <li><a href="#" class="text-primary-700">關於我們</a></li>
-        </ul>
-        <div class="d-flex gap-2"><span class="material-symbols-outlined text-primary-700">
-          shopping_cart
-        </span><span class="text-primary-700">登入</span></div>
-      </nav>
-    </header>
-    
-    <footer>
-      <div class="container bg-primary-900 text-grey-000 py-9">
-        <div class="d-flex flex-column gap-7 mb-7">
-          <img src="data:image/png;base64,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" class="mx-auto" alt="logo">
-          <ul class="d-flex justify-content-between mx-auto gap-6">
-            <li><a href="#" class="px-3 py-2">聯絡我們</a></li>
-            <li><a href="#" class="px-3 py-2">常見問題</a></li>
-            <li><a href="#" class="px-3 py-2">更多資訊</a></li>
-          </ul>
-        </div>
-        
-          <div class="footer-info mx-auto">
-            <ul class="footer-contact d-flex flex-column mx-auto gap-6 mb-7 ps-3">
-              <li>客服信箱：<a href="mailto:Service@travel.com">Service@travel.com</a></li>
-              <li>客服專線：<a href="tel+886-09XX-XXX-XXX">09XX-XXX-XXX |平日9:00~18:00</a></li>
-              <li><p>聯絡地址：新北市板橋區仁愛路XXX號</p></li>
-            </ul>
-            <ul class="footer-icons d-flex justify-content-between align-items-center mx-auto mb-4">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIQSURBVHgB7VfdbcIwEL6EgMRbukE6QekGdIROAN2ATkCZADoB6QTtBmQD2KDegLwh8Zd+V5HIdWxjwPSl/SSL2Gff/9kH0V9HQGegKIp4s9kkQRDE5VoURQvMc7oWWOhutxtut9sZRqEboM/X6/VgtVol5AsHwWOTUMuYuihiDQGs6TQajXcokdB5EPv9/rHVai1MG0ITARb0wjCcXSCckYDHnHmZNmg9wJbzQfIIeOJe54maB9hidju5Icf+ESriFlUQlANrDzVBYcihjI9yhLtSxyRbmpKMjTBUydgq3HRQNxCm/jl8VC9EivUDXCbkAliTKUL5curz5QQ+sYkPy8DPSzkPFKZzMOrQceSI9Y3COMVPz+GswNnbclIlIVvgKPxbAc1al9yQyGGoFIAFrsIvBr8jNQXkh+UXUBkrJ6FVAbjtFV6amOiwqlt+N5tN/p6a9uJOyGsKQIA4UgF5u90WJqJMQ4nGEGLayrIqBapdyExBngBDEhsdnhQ1BXCIF700FOB1ZyEL2Vs//ATXvJGZ6VC60T5VOltV0slekpk8UQP1QVcGknVEJgWQvRkpGnpGqiZyLVXxFD+Rp1xQkKvWaxU4JOMzeQYakpGujLXFipJMudEgT2Be6IYmJx/kFtvwrlurQG5amAddAm4uELvsVAX4jNf/B3zXH9q1pUUBtjiV34WrgLtml7V/uOALVQRJ1HwltYsAAAAASUVORK5CYII=" alt="fb">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ5SURBVHgB5VfdUcJAEN7wN8MbdnAdiBUYO8AKjBWoFRAqECswVCAdiBVoB8YK5I0Zfv1W93AFkhzkfOKbucnm/vbbvd3NhejYERRNWK1WrcViEUJs0R7AunQ+n6fNZjOlQwjMZrMwCIIuxJDKYbRcLgeNRiMhVwKw+B4W3JJHwJi4Wq32tvppW3kXymN5HUMeYPEbHYYQ7UqR6IPEXeZsnFmEtpL2PplMDJUEDDAw6t3uy0dLOQSe7cQyyjlwoajPjWUmgT0/Ze/nrEVGWf9IJcCKlcX9zT4mZefWrIABgzP6lhG1LwUKQmzSrlQqp0L+A+uTvJTTcSRpPfxDABMMFUBqAnunY8nKWqrX610mAXK9Wq0WQ/6xEPLmPjBw2wMOyg0W8vmZnGkRiIR4nuHplMYVcgQsj5mEvKaQL5BSJ7CQXXEJL6QyZsRLTnAiIIptPqdQzBaOoHTMHSAxRDycKRKd3HTblwDXB/V6ZxVrcB+O6FqRbpMvAjpA2dqseRhbR7rNEC8ENHQOb2KXZ7wQgGvXluE4Ml2LsY6VuTaQLwK6iEB+3OUF7sPYvSKTkC8CHPEklYt+0uzVWit1P4SXXlWaJkUXEQvnQoTUu4aStijh9sTVDmS+KyH67dSUq6Hrvs5ByAGGyL6AOMiZNuQa4Wo9Q3ugMIKl0ER8YeHaoFz+xnEiR1UIVbB+wWe5+Qn1CQ7KwruGupB8+rgNWei7BowbZU7kaP7vK9l0Oo30eLCDRB9ndKO6ErQXOgD8PcBe/BFryXsPcRLnEhASsfwTeAOUP+y6I2T+mEiURyByTuUUs/firAxx+TUzcl80tB/GqAmjQz5Qx4Uv21zwU/nKNgIAAAAASUVORK5CYII=" alt="ig">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJeSURBVHgB7VfbccIwEDwbwwx/pAOnA9KBqQDSAemAVBCogFABpIKQCnAHOBXEHYQ/Zng5ux6L0ZjYlnn4J9kZjyxZ0q3uTitZ5K/DSjdst1sviqK2ZVktuSIw52q/38+bzWaYSQAdXtBxKDcEFjas1WqjEwIw7ILAl1QA2OrU63Wf77ZqhOt7UhEYYvV+JHDtmOdBt2VLOazAfoLyER67RyzvHMexDofDA9vwvGHysMR84hj2iw3D2CsMrNIfG41GgILPnPXdbtdHPya0WzSxCYEQq+2kt0/upI4zg3EfnlkUkSgKQWnjCgyFbdudopAUEXg+x7hOAl54knMIYHAAV6qYLtbrtcv3RC+Wm82mzRL1Fsox6n2W1BI+VFT2T/a7X5oAmH9oVQ9k3ISMy30M97ZZoj5IpDtuxxOCwATtoRqMts8sO5lJyInEAMx2egv9VVMb29MFQY4Pkz5B1vi8HDASJm5PXdkAH/URSPiqAd5slSaAFXT1OlaxgFsjTcViPUBohqlMp6RPEQZPG+tl2cnTAcazReHh4cEGHqkUHSTcgypBIP4OwiQ0Y44kxIJkDJO2K0VA1g65wtTzLheCc6TnpS31vUgHerwjyJlIxuaesoWHES8oYD1VOlDC+NjkcmN6GvYhKEzCKQUoryPzhsKFciAGKHMcuySCZFvCwLeujgpUP2y5JV49wzlL3wcUuBU9eCX2hpJjblWTI1iH6X0gEzz7aVwMhevaBC7epscQUGSkIui29EtpIBWBPygnBHhu8xCRG4M29EuO9UsHl/8It/g1o5fVD8k/FH4AyI2hkIpqsb8AAAAASUVORK5CYII=" alt="line">
-            </ul>
-            <p class="">旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
+    <!-- Header -->
+<header>
+  <nav class="container d-flex justify-content-between align-items-center p-3">
+    <img src="/2024_ReactProject_B-5/assets/logo_green-D_Nz9I2J.png" class="img-fluid" alt="logo">
+
+    <!-- 電腦版導航項目 -->
+    <ul class="nav-items d-flex justify-content-between gap-4 align-items-center">
+      <li><a href="/src/pages/tourList.html" class="text-primary-700">旅途行程</a></li>
+      <li><a href="#" class="text-primary-700">拾光日誌</a></li>
+      <li><a href="#" class="text-primary-700">關於我們</a></li>
+    </ul>
+
+    <!-- 手機版漢堡菜單 -->
+    <div class="hamburger-menu d-block d-sm-none" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-symbols-outlined text-primary-700">menu</span>
+    </div>
+
+    <!-- 手機版折疊選單 -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">旅途行程</a></li>
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">拾光日誌</a></li>
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">關於我們</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex gap-2"><span class="material-symbols-outlined text-primary-700">
+      shopping_cart
+    </span><span class="text-primary-700">登入</span></div>
+  </nav>
+</header>
+
+<!-- Hero 區塊：背景圖片 -->
+<div class="hero">
+  <div class="container">
+    <h1 class="display-4">旅途拾光</h1>
+    <p class="lead">It's TIME for your journey</p>
+    <a href="#search" class="btn btn-primary btn-lg">開始探索</a>
+  </div>
+</div>
+
+  <!-- 搜尋區塊 -->
+  <div id="search" class="search-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="d-flex">
+            <div class="search-input">
+              <input type="text" class="form-control" placeholder="例如：台灣">
+            </div>
+            <div class="search-input mx-2">
+              <input type="text" class="form-control" placeholder="例如：黃金">
+            </div>
+            <div class="search-input">
+              <input type="text" class="form-control" placeholder="YY/MM/DD">
+            </div>
+            <div class="search-input mx-2">
+              <input type="number" class="form-control" placeholder="例如：1">
+            </div>
+            <button class="btn btn-primary">搜尋</button>
           </div>
-        
+        </div>
       </div>
-    </footer>
-    
-    
-    
+    </div>
+  </div>
+
+  <!-- 旅程行程 -->
+  <div id="journey" class="container mt-5">
+    <h2 class="main-title text-center">旅途行程</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_13-BbkpfHcd.jpg" class="card-img-top" alt="台真賞楓圓">
+          <div class="card-body">
+            <h5 class="card-title">台東賞楓圓</h5>
+            <p class="card-text">路上會有的景點、感受秋天的楓葉與壯麗的山脈景色，將帶給你無窮的美麗。</p>
+            <p class="text-success font-weight-bold">NT$ 4,980</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_10-DFFrtnb1.jpg" class="card-img-top" alt="京都奈良一日遊">
+          <div class="card-body">
+            <h5 class="card-title">京都奈良一日遊</h5>
+            <p class="card-text">探索京都與奈良的美麗景點，享受最經典的日本風情。</p>
+            <p class="text-success font-weight-bold">NT$ 21,000</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_9-C7kxrhJz.jpg" class="card-img-top" alt="大阪三天兩夜">
+          <div class="card-body">
+            <h5 class="card-title">大阪三天兩夜</h5>
+            <p class="card-text">大阪是日本的經濟與文化重心，感受熱鬧的都市氛圍。</p>
+            <p class="text-success font-weight-bold">NT$ 3,200</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 拾光活動 -->
+  <div id="activity" class="container mt-5">
+    <h2 class="main-title text-center">拾光活動</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_4-D60qJXQ3.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">太魯閣峽谷自駕探險</h5>
+            <p class="card-text">探索太魯閣峽谷，感受自然與美麗景觀，讓你流連忘返。</p>
+            <p class="text-success font-weight-bold">NT$ 2,300</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_7-BOFiqnT_.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">阿里山賞櫻之旅</h5>
+            <p class="card-text">每年春天，阿里山的櫻花盛開，無數遊客前來觀賞。</p>
+            <p class="text-success font-weight-bold">NT$ 2,300</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/2024_ReactProject_B-5/assets/Location_6-D2UZXknl.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">日月潭環湖騎乘之旅</h5>
+            <p class="card-text">享受日月潭的美麗景色，進行一場悠閒的環湖騎行。</p>
+            <p class="text-success font-weight-bold">NT$ 1,600</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 拾光日誌 -->
+  <div id="journal">
+    <div class="title-container">
+      <h2>拾光日誌</h2>
+      <div>
+        <button class="arrow-button">&lt;</button>
+        <button class="arrow-button">&gt;</button>
+      </div>
+    </div>
+    <div class="content">
+      <img src="/2024_ReactProject_B-5/assets/%E6%8B%BE%E5%85%89%E6%97%A5%E8%AA%8C_1-CbuLMLRn.jpg" alt="日誌圖片" class="left-image">
+      <img src="/2024_ReactProject_B-5/assets/%E6%8B%BE%E5%85%89%E6%97%A5%E8%AA%8C_2-C7f926Bm.jpg" alt="日誌圖片" class="middle-image">
+      <div class="right-text">
+        <h3>陽明山放鬆之旅</h3>
+        <p>踏上陽明山的放鬆之旅，遠離城市的繁忙與喧囂，沉浸在大自然的懷抱中。陽明山四季皆有不同的風貌，春天的花海、夏天的翠綠、秋天的金黃與冬天的溫泉景緻，為每位旅人帶來獨特的感官享受。走在綿延的山林步道間，感受空氣中的濃郁芬多精，隨著山風輕拂，壓力與疲憊漸漸被拂去。</p>
+        <button>繼續閱讀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 關於我們 -->
+  <div id="about">
+    <div class="title-container">
+      <h2 class="main-title">關於我們</h2>
+    </div>
+
+    <div class="section-1">
+      <img src="/2024_ReactProject_B-5/assets/%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91_1-BSVFYqyK.jpg" class="left-image" alt="品牌圖片">
+      <div class="right-text">
+        <h3>品牌理念</h3>
+        <p>我們的品牌理念是為每一位旅客提供最貼心、最獨特的旅遊體驗，致力於開發有特色的行程，為您打造一段難忘的回憶。</p>
+        <button>了解更多</button>
+      </div>
+    </div>
+
+    <div class="section-2">
+      <div class="left-text">
+        <h3>服務介紹</h3>
+        <p>我們提供一站式的旅遊服務，從行程規劃到預定服務，確保每個細節都能符合您的需求。</p>
+        <button>了解更多</button>
+      </div>
+      <img src="/2024_ReactProject_B-5/assets/%E9%97%9C%E6%96%BC%E6%88%91%E5%80%91_2-Ds2jCyt4.jpg" class="right-image" alt="服務介紹圖片">
+    </div>
+  </div>
+
+  <!-- Footer -->
+<!-- Footer -->
+<footer>
+  <div class="container" style="width: 1920px; height: 488px; gap: 32px; padding-top: 64px; padding-right: 312px; padding-bottom: 64px; padding-left: 312px;">
+    <!-- Logo and links -->
+    <div class="footer-logo-links" style="width: 1296px; height: 120px; gap: 40px; display: flex; justify-content: space-between; align-items: center;">
+      <img src="data:image/png;base64,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" alt="Logo" class="footer-logo">
+      <ul class="footer-links d-flex gap-4">
+        <li><a href="#" class="footer-link">聯絡我們</a></li>
+        <li><a href="#" class="footer-link">常見問題</a></li>
+        <li><a href="#" class="footer-link">更多資訊</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact information block -->
+    <div class="footer-contact-info" style="width: 388px; height: 208px; gap: 32px;">
+      <ul class="footer-contact d-flex flex-column gap-12">
+        <li><span>客服信箱：</span><a href="mailto:Service@travel.com">Service@travel.com</a></li>
+        <li><span>客服專線：</span><a href="tel+886-09XX-XXX-XXX">09XX-XXX-XXX |平日9:00~18:00</a></li>
+        <li><span>聯絡地址：</span>新北市板橋區仁愛路XXX號</li>
+      </ul>
+    </div>
+
+    <!-- Social media logos and footer text -->
+    <div class="footer-social-media" style="width: 388px; height: 80px; gap: 24px;">
+      <ul class="footer-icons d-flex justify-content-between align-items-center">
+        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIQSURBVHgB7VfdbcIwEL6EgMRbukE6QekGdIROAN2ATkCZADoB6QTtBmQD2KDegLwh8Zd+V5HIdWxjwPSl/SSL2Gff/9kH0V9HQGegKIp4s9kkQRDE5VoURQvMc7oWWOhutxtut9sZRqEboM/X6/VgtVol5AsHwWOTUMuYuihiDQGs6TQajXcokdB5EPv9/rHVai1MG0ITARb0wjCcXSCckYDHnHmZNmg9wJbzQfIIeOJe54maB9hidju5Icf+ESriFlUQlANrDzVBYcihjI9yhLtSxyRbmpKMjTBUydgq3HRQNxCm/jl8VC9EivUDXCbkAliTKUL5curz5QQ+sYkPy8DPSzkPFKZzMOrQceSI9Y3COMVPz+GswNnbclIlIVvgKPxbAc1al9yQyGGoFIAFrsIvBr8jNQXkh+UXUBkrJ6FVAbjtFV6amOiwqlt+N5tN/p6a9uJOyGsKQIA4UgF5u90WJqJMQ4nGEGLayrIqBapdyExBngBDEhsdnhQ1BXCIF700FOB1ZyEL2Vs//ATXvJGZ6VC60T5VOltV0slekpk8UQP1QVcGknVEJgWQvRkpGnpGqiZyLVXxFD+Rp1xQkKvWaxU4JOMzeQYakpGujLXFipJMudEgT2Be6IYmJx/kFtvwrlurQG5amAddAm4uELvsVAX4jNf/B3zXH9q1pUUBtjiV34WrgLtml7V/uOALVQRJ1HwltYsAAAAASUVORK5CYII=" alt="fb" class="social-icon"></li>
+        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ5SURBVHgB5VfdUcJAEN7wN8MbdnAdiBUYO8AKjBWoFRAqECswVCAdiBVoB8YK5I0Zfv1W93AFkhzkfOKbucnm/vbbvd3NhejYERRNWK1WrcViEUJs0R7AunQ+n6fNZjOlQwjMZrMwCIIuxJDKYbRcLgeNRiMhVwKw+B4W3JJHwJi4Wq32tvppW3kXymN5HUMeYPEbHYYQ7UqR6IPEXeZsnFmEtpL2PplMDJUEDDAw6t3uy0dLOQSe7cQyyjlwoajPjWUmgT0/Ze/nrEVGWf9IJcCKlcX9zT4mZefWrIABgzP6lhG1LwUKQmzSrlQqp0L+A+uTvJTTcSRpPfxDABMMFUBqAnunY8nKWqrX610mAXK9Wq0WQ/6xEPLmPjBw2wMOyg0W8vmZnGkRiIR4nuHplMYVcgQsj5mEvKaQL5BSJ7CQXXEJL6QyZsRLTnAiIIptPqdQzBaOoHTMHSAxRDycKRKd3HTblwDXB/V6ZxVrcB+O6FqRbpMvAjpA2dqseRhbR7rNEC8ENHQOb2KXZ7wQgGvXluE4Ml2LsY6VuTaQLwK6iEB+3OUF7sPYvSKTkC8CHPEklYt+0uzVWit1P4SXXlWaJkUXEQvnQoTUu4aStijh9sTVDmS+KyH67dSUq6Hrvs5ByAGGyL6AOMiZNuQa4Wo9Q3ugMIKl0ER8YeHaoFz+xnEiR1UIVbB+wWe5+Qn1CQ7KwruGupB8+rgNWei7BowbZU7kaP7vK9l0Oo30eLCDRB9ndKO6ErQXOgD8PcBe/BFryXsPcRLnEhASsfwTeAOUP+y6I2T+mEiURyByTuUUs/firAxx+TUzcl80tB/GqAmjQz5Qx4Uv21zwU/nKNgIAAAAASUVORK5CYII=" alt="ig" class="social-icon"></li>
+        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJeSURBVHgB7VfbccIwEDwbwwx/pAOnA9KBqQDSAemAVBCogFABpIKQCnAHOBXEHYQ/Zng5ux6L0ZjYlnn4J9kZjyxZ0q3uTitZ5K/DSjdst1sviqK2ZVktuSIw52q/38+bzWaYSQAdXtBxKDcEFjas1WqjEwIw7ILAl1QA2OrU63Wf77ZqhOt7UhEYYvV+JHDtmOdBt2VLOazAfoLyER67RyzvHMexDofDA9vwvGHysMR84hj2iw3D2CsMrNIfG41GgILPnPXdbtdHPya0WzSxCYEQq+2kt0/upI4zg3EfnlkUkSgKQWnjCgyFbdudopAUEXg+x7hOAl54knMIYHAAV6qYLtbrtcv3RC+Wm82mzRL1Fsox6n2W1BI+VFT2T/a7X5oAmH9oVQ9k3ISMy30M97ZZoj5IpDtuxxOCwATtoRqMts8sO5lJyInEAMx2egv9VVMb29MFQY4Pkz5B1vi8HDASJm5PXdkAH/URSPiqAd5slSaAFXT1OlaxgFsjTcViPUBohqlMp6RPEQZPG+tl2cnTAcazReHh4cEGHqkUHSTcgypBIP4OwiQ0Y44kxIJkDJO2K0VA1g65wtTzLheCc6TnpS31vUgHerwjyJlIxuaesoWHES8oYD1VOlDC+NjkcmN6GvYhKEzCKQUoryPzhsKFciAGKHMcuySCZFvCwLeujgpUP2y5JV49wzlL3wcUuBU9eCX2hpJjblWTI1iH6X0gEzz7aVwMhevaBC7epscQUGSkIui29EtpIBWBPygnBHhu8xCRG4M29EuO9UsHl/8It/g1o5fVD8k/FH4AyI2hkIpqsb8AAAAASUVORK5CYII=" alt="line" class="social-icon"></li>
+      </ul>
+      <p>旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
+    </div>
+  </div>
+</footer>
     
     
     <!-- <div id="root"></div> -->
-
-    <!-- <h1 class="bg-primary-900">標題一</h1>
-    <h2>標題二</h2> -->
-    
   </body>
 </html>
