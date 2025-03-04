@@ -1,13 +1,583 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅途行程</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #e3f2f9;
+      overflow-x: hidden; /* 防止水平滾動條 */
+    }
+
+    .hero {
+      background-image: url('/src/assets/img/01_header.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* 修正 nav bar */
+    header {
+      background-color: #FCFCFC;
+      color: white;
+      width: 100%;
+      padding-top: 16px;
+      padding-right: 312px;
+      padding-bottom: 16px;
+      padding-left: 312px;
+      border-bottom: 1px solid #000; /* 加入底線 */
+    }
+
+    header .nav-items a {
+      color: #22727E;
+    }
+
+    header .nav-items a:hover {
+      color: #ffcc00;
+    }
+
+    .main-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background-color: #00695c;
+      border: none;
+    }
+
+    .card {
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card .card-title {
+      font-weight: bold;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* 搜尋區域 */
+    .search-section {
+      background-color: #CCE5E9;
+      padding-top: 40px;
+      padding-right: 312px;
+      padding-bottom: 40px;
+      padding-left: 312px;
+      gap: 64px;
+    }
+
+    .search-input {
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    .search-input input {
+      width: 100%;
+    }
+
+    .btn-primary {
+      background-color: #00695c;
+      border: none;
+      padding: 10px 20px;
+    }
+
+    /* 拾光日誌 */
+    #journal {
+      width: 1920px;
+      height: 1174px;
+      padding-top: 120px;
+      padding-right: 312px;
+      padding-bottom: 120px;
+      padding-left: 312px;
+      gap: 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title-container h2 {
+      font-family: "Noto Sans TC";
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 57.6px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 64px;
+    }
+
+    .left-image {
+      width: 526px;
+      height: 720px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .middle-image {
+      width: 306px;
+      height: 355px;
+      border-radius: 8px;
+      object-fit: cover;
+      position: relative;
+      left: -100px;
+    }
+
+    .right-text {
+      width: 526px;
+      height: 720px;
+      padding-left: 56px;
+      gap: 32px;
+    }
+
+    .right-text h3 {
+      width: 470px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .right-text p {
+      width: 470px;
+      height: 384px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: white;
+    }
+
+    .right-text button {
+      width: 110px;
+      height: 40px;
+      padding-top: 8px;
+      padding-right: 16px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      gap: 12px;
+      border-radius: 8px;
+      border-width: 1px;
+      background-color: #00695c;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .right-text button:hover {
+      background-color: #004d40;
+    }
+
+    #about {
+      width: 100%;
+      max-width: 1920px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      padding-top: 80px;
+      padding-right: 312px;
+      padding-bottom: 80px;
+      padding-left: 312px;
+      background-color: #f8f9fa;
+      box-sizing: border-box;
+    }
+
+    .about-title-container {
+      width: 192px;
+      height: 58px;
+      overflow: hidden;
+    }
+
+    .section-1, .section-2 {
+      width: 100%;
+      max-width: 1920px;
+      display: flex;
+      gap: 12px;
+      box-sizing: border-box;
+    }
+
+    .left-image, .right-image {
+      width: 100%;
+      max-width: 526px;
+      height: 760px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .right-text {
+      width: 100%;
+      max-width: 636px;
+      height: 760px;
+      gap: 32px;
+      padding-left: 56px;
+    }
+
+    .right-text p {
+      font-family: "Noto Sans TC", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    .right-text h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #22727E;
+    }
+
+    .right-text button {
+      background-color: #00695c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .right-text button:hover {
+      background-color: #004d40;
+    }
+
+    /* Adjust footer layout */
+    footer {
+      background-color: #00695c;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Logo and links */
+    .footer-logo-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      width: 1296px;
+      height: 120px;
+    }
+
+    .footer-logo {
+      max-width: 200px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer-link:hover {
+      color: #ffcc00; /* Optional hover color */
+    }
+
+    /* Contact Information Block */
+    .footer-contact-info {
+      width: 388px;
+      height: 208px;
+      gap: 32px;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 16px;
+      color: white;
+    }
+
+    .footer-contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Social Media and Footer Text */
+    .footer-social-media {
+      width: 388px;
+      height: 80px;
+      gap: 24px;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    footer p {
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<!-- Header -->
+<header>
+  <nav class="container d-flex justify-content-between align-items-center p-3">
+    <img src="/src/assets/img/indexImg/logo_green.png" class="img-fluid" alt="logo">
+
+    <!-- 電腦版導航項目 -->
+    <ul class="nav-items d-flex justify-content-between gap-4 align-items-center">
+      <li><a href="#" class="text-primary-700">旅途行程</a></li>
+      <li><a href="#" class="text-primary-700">拾光日誌</a></li>
+      <li><a href="#" class="text-primary-700">關於我們</a></li>
+    </ul>
+
+    <!-- 手機版漢堡菜單 -->
+    <div class="hamburger-menu d-block d-sm-none" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="material-symbols-outlined text-primary-700">menu</span>
+    </div>
+
+    <!-- 手機版折疊選單 -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">旅途行程</a></li>
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">拾光日誌</a></li>
+        <li class="nav-item"><a class="nav-link text-primary-700" href="#">關於我們</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex gap-2"><span class="material-symbols-outlined text-primary-700">
+      shopping_cart
+    </span><span class="text-primary-700">登入</span></div>
+  </nav>
+</header>
+
+<!-- Hero 區塊：背景圖片 -->
+<div class="hero">
+  <div class="container">
+    <h1 class="display-4">旅途拾光</h1>
+    <p class="lead">It's TIME for your journey</p>
+    <a href="#search" class="btn btn-primary btn-lg">開始探索</a>
+  </div>
+</div>
+
+  <!-- 搜尋區塊 -->
+  <div id="search" class="search-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="d-flex">
+            <div class="search-input">
+              <input type="text" class="form-control" placeholder="例如：台灣">
+            </div>
+            <div class="search-input mx-2">
+              <input type="text" class="form-control" placeholder="例如：黃金">
+            </div>
+            <div class="search-input">
+              <input type="text" class="form-control" placeholder="YY/MM/DD">
+            </div>
+            <div class="search-input mx-2">
+              <input type="number" class="form-control" placeholder="例如：1">
+            </div>
+            <button class="btn btn-primary">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 旅程行程 -->
+  <div id="journey" class="container mt-5">
+    <h2 class="main-title text-center">旅途行程</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_13.jpg" class="card-img-top" alt="台真賞楓圓">
+          <div class="card-body">
+            <h5 class="card-title">台東賞楓圓</h5>
+            <p class="card-text">路上會有的景點、感受秋天的楓葉與壯麗的山脈景色，將帶給你無窮的美麗。</p>
+            <p class="text-success font-weight-bold">NT$ 4,980</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_10.jpg" class="card-img-top" alt="京都奈良一日遊">
+          <div class="card-body">
+            <h5 class="card-title">京都奈良一日遊</h5>
+            <p class="card-text">探索京都與奈良的美麗景點，享受最經典的日本風情。</p>
+            <p class="text-success font-weight-bold">NT$ 21,000</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_9.jpg" class="card-img-top" alt="大阪三天兩夜">
+          <div class="card-body">
+            <h5 class="card-title">大阪三天兩夜</h5>
+            <p class="card-text">大阪是日本的經濟與文化重心，感受熱鬧的都市氛圍。</p>
+            <p class="text-success font-weight-bold">NT$ 3,200</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 拾光活動 -->
+  <div id="activity" class="container mt-5">
+    <h2 class="main-title text-center">拾光活動</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_4.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">太魯閣峽谷自駕探險</h5>
+            <p class="card-text">探索太魯閣峽谷，感受自然與美麗景觀，讓你流連忘返。</p>
+            <p class="text-success font-weight-bold">NT$ 2,300</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_7.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">阿里山賞櫻之旅</h5>
+            <p class="card-text">每年春天，阿里山的櫻花盛開，無數遊客前來觀賞。</p>
+            <p class="text-success font-weight-bold">NT$ 2,300</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="/src/assets/img/Location_6.jpg" class="card-img-top" alt="活動圖片">
+          <div class="card-body">
+            <h5 class="card-title">日月潭環湖騎乘之旅</h5>
+            <p class="card-text">享受日月潭的美麗景色，進行一場悠閒的環湖騎行。</p>
+            <p class="text-success font-weight-bold">NT$ 1,600</p>
+            <button class="btn btn-primary">加入購物車</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 拾光日誌 -->
+  <div id="journal">
+    <div class="title-container">
+      <h2>拾光日誌</h2>
+      <div>
+        <button class="arrow-button">&lt;</button>
+        <button class="arrow-button">&gt;</button>
+      </div>
+    </div>
+    <div class="content">
+      <img src="/src/assets/img/拾光日誌_1.jpg" alt="日誌圖片" class="left-image">
+      <img src="/src/assets/img/拾光日誌_2.jpg" alt="日誌圖片" class="middle-image">
+      <div class="right-text">
+        <h3>陽明山放鬆之旅</h3>
+        <p>踏上陽明山的放鬆之旅，遠離城市的繁忙與喧囂，沉浸在大自然的懷抱中。陽明山四季皆有不同的風貌，春天的花海、夏天的翠綠、秋天的金黃與冬天的溫泉景緻，為每位旅人帶來獨特的感官享受。走在綿延的山林步道間，感受空氣中的濃郁芬多精，隨著山風輕拂，壓力與疲憊漸漸被拂去。</p>
+        <button>繼續閱讀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 關於我們 -->
+  <div id="about">
+    <div class="title-container">
+      <h2 class="main-title">關於我們</h2>
+    </div>
+
+    <div class="section-1">
+      <img src="/src/assets/img/關於我們_1.jpg" class="left-image" alt="品牌圖片">
+      <div class="right-text">
+        <h3>品牌理念</h3>
+        <p>我們的品牌理念是為每一位旅客提供最貼心、最獨特的旅遊體驗，致力於開發有特色的行程，為您打造一段難忘的回憶。</p>
+        <button>了解更多</button>
+      </div>
+    </div>
+
+    <div class="section-2">
+      <div class="left-text">
+        <h3>服務介紹</h3>
+        <p>我們提供一站式的旅遊服務，從行程規劃到預定服務，確保每個細節都能符合您的需求。</p>
+        <button>了解更多</button>
+      </div>
+      <img src="/src/assets/img/關於我們_2.jpg" class="right-image" alt="服務介紹圖片">
+    </div>
+  </div>
+
+  <!-- Footer -->
+<!-- Footer -->
+<footer>
+  <div class="container" style="width: 1920px; height: 488px; gap: 32px; padding-top: 64px; padding-right: 312px; padding-bottom: 64px; padding-left: 312px;">
+    <!-- Logo and links -->
+    <div class="footer-logo-links" style="width: 1296px; height: 120px; gap: 40px; display: flex; justify-content: space-between; align-items: center;">
+      <img src="/src/assets/img/indexImg/logo_white.png" alt="Logo" class="footer-logo">
+      <ul class="footer-links d-flex gap-4">
+        <li><a href="#" class="footer-link">聯絡我們</a></li>
+        <li><a href="#" class="footer-link">常見問題</a></li>
+        <li><a href="#" class="footer-link">更多資訊</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact information block -->
+    <div class="footer-contact-info" style="width: 388px; height: 208px; gap: 32px;">
+      <ul class="footer-contact d-flex flex-column gap-12">
+        <li><span>客服信箱：</span><a href="mailto:Service@travel.com">Service@travel.com</a></li>
+        <li><span>客服專線：</span><a href="tel+886-09XX-XXX-XXX">09XX-XXX-XXX |平日9:00~18:00</a></li>
+        <li><span>聯絡地址：</span>新北市板橋區仁愛路XXX號</li>
+      </ul>
+    </div>
+
+    <!-- Social media logos and footer text -->
+    <div class="footer-social-media" style="width: 388px; height: 80px; gap: 24px;">
+      <ul class="footer-icons d-flex justify-content-between align-items-center">
+        <li><img src="/src/assets/img/indexImg/Icon_fb.png" alt="fb" class="social-icon"></li>
+        <li><img src="/src/assets/img/indexImg/Icon_ig.png" alt="ig" class="social-icon"></li>
+        <li><img src="/src/assets/img/indexImg/Icon_line.png" alt="line" class="social-icon"></li>
+      </ul>
+      <p>旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
+    </div>
+  </div>
+</footer>
+
+
