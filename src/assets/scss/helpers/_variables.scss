@@ -738,6 +738,17 @@ $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+
+// 客製化字級
+$h1-font-size:                   $font-size-base * 3;    // = 設計稿的 h1 48px
+$h2-font-size:                   $font-size-base * 2.5;  // = 設計稿的 h2 40px
+$h3-font-size:                   $font-size-base * 2;    // = 設計稿的 h3 32px
+$h4-font-size:                   $font-size-base * 1.75; // = 設計稿的 h4 28px
+$h5-font-size:                   $font-size-base * 1.5;  // = 設計稿的 h5 24px
+$h6-font-size:                   $font-size-base * 1.25; // = 設計稿的 h6 20px
+$h7-font-size:                   $font-size-base * 2.25; // = 設計稿的 h7 36px
+$h8-font-size:                   $font-size-base * 1.125; // = 設計稿的 h8 18px
+// 客製化字級結束
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
