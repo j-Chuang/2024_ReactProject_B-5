@@ -1,0 +1,7 @@
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsImlhdCI6MTczNjIzMzE3MiwiZXhwIjoxNzM2MjM2NzcyLCJzdWIiOiIyIn0.r3-GSmtgCGGaD1qPM-7GocaJ10u6vAiLtonywqey6Us",
+    "user": {
+        "email": "example@gmail.com",
+        "id": 1
+    }
+}
