@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/assets/all.scss">
+</head>
+<body>
+  <header class="bg-grey-000">
+    <nav class="container d-flex justify-content-between align-items-center p-3">
+      <a href="/index.html" class="logoImg"><img src="/src/assets/img/indexImg/logo_green.png" class=".img-fluid" alt="logo"></a>
+      <ul class="d-flex justify-content-between gap-4 align-items-center">
+        <li><a href="/src/pages/tourList.html" class="text-primary-700">旅途行程</a></li>
+        <li><a href="#" class="text-primary-700">拾光日誌</a></li>
+        <li><a href="#" class="text-primary-700">關於我們</a></li>
+      </ul>
+      <div class="d-flex gap-2"><span class="material-symbols-outlined text-primary-700">
+        shopping_cart
+      </span><span class="text-primary-700">登入</span></div>
+    </nav>
+  </header>
+  
+
+
+  <div class="banner">
+  <div class="container">
+    <div class="banner-content mx-auto">
+      <p class="text-grey-000 display-5 mb-4">探索你的下一個旅程</p>
+      <div class="w-100">
+        <span></span>
+        <input type="text" placeholder="搜尋國家 / 地區等" class="w-100 py-2">
+      </div>
+    </div>
+  </div>
+</div>
+  <main>
+    <div class="container my-10">
+      <div class="row">
+        <section class="filters col-md-3">            
+                    <div class="mb-5">
+                      <h5 class="mb-3">目的地</h5>
+                      <hr>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="taiwan">
+                          <label class="form-check-label" for="taiwan">台灣</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="japan">
+                          <label class="form-check-label" for="japan">日本</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="korea">
+                          <label class="form-check-label" for="korea">韓國</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="europe">
+                          <label class="form-check-label" for="europe">歐洲</label>
+                      </div>
+                    </div>
+        
+                    <div class="mb-5">
+                      <h5 class="mb-3">出發日期</h5>
+                      <hr>
+                      <input type="date" class="form-control">
+                    </div>
+                              
+                    <div class="mb-5">
+                      <h5 class="mb-3">行程分類</h5>
+                      <hr>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="nature">
+                          <label class="form-check-label" for="nature">自然景點</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="culture">
+                          <label class="form-check-label" for="culture">文化體驗</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="adventure">
+                          <label class="form-check-label" for="adventure">戶外探險</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="food">
+                          <label class="form-check-label" for="food">美食之旅</label>
+                      </div>
+                    </div>
+        
+                    <h5 class="mb-3">費用</h5>
+                    <hr>
+                    <p>NT$ <span>0</span> ~ <span>9999</span></p>
+                    <input type="range" class="form-range" min="0" max="9999">                  
+                  </section>
+                     
+        <section class="col-md-9">
+          <div class="mb-8 d-flex justify-content-between text-primary-900 align-items-center">
+            <div class="d-flex justify-content-between gap-4">
+              <p>已選擇<span class="text-primary-800 px-2">2</span>個篩選條件</p>
+              <a href="#">清除</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center gap-4">
+              <span>排序方式</span>
+              <select name="sort" id="sort" class="text-primary-700 px-3 py-2">
+                <option value="">最新</option>
+                <option value="">熱門</option>
+                <option value="">價格低->高</option>
+              </select></div>
+          </div>
+          <ul class="row g-4 mb-8">
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4 text-primary-800">
+                  <h2 class="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3 d-flex align-items-center"><span class="material-symbols-outlined me-2">
+                    location_on
+                    </span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-3">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3"><span></span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-3">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3"><span></span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-3">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3"><span></span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-3">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3"><span></span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>
+            <li class="col-md-6">
+              <a class="card p-0" target="_blank" href="#">
+                <img src="/src/assets/img/otherImg/unsplash_UHcwyq05_Gk.png" class="card-img-top object-fit" alt="">
+                <div class="card-body p-4">
+                  <h2 class="card-title mb-3">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
+                  <div class="card-subtitle mb-3"><span></span><span>日本</span><span> - </span><span>多日遊</span></div>
+                  <p class="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
+                  <span class="fs-4 text-secondary-700 fw-semibold">NTD$ 16,800</span>
+                </div>
+              </a>
+            </li>             
+          
+            <!-- <li class="col-6">
+              
+                <a className="card" target="_blank" href={item.link} >
+                  <img src={item.imageUrl} className="card-img-top object-fit" alt="toothbrush"/>
+                  <div className="card-body">
+                    <span className="text-dark">{item.title}</span>
+                    <span className="float-end">$ {item.price}</span>
+                  </div>
+                </a>                 
+            </li> -->
+
+          </ul>
+          <nav aria-label="Search results pages">
+            <ul class="pagination justify-content-center">
+              <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+
+
+
+
+  <footer class="bg-primary-900">
+    <div class="container text-grey-000 py-9">
+      <div class="d-flex flex-column gap-7 mb-7">
+        <a href="/index.html" class="logoImg mx-auto"><img src="/src/assets/img/indexImg/logo_white.png" alt="logo"></a>
+        <ul class="d-flex justify-content-between mx-auto gap-6">
+          <li><a href="#" class="px-3 py-2">聯絡我們</a></li>
+          <li><a href="#" class="px-3 py-2">常見問題</a></li>
+          <li><a href="#" class="px-3 py-2">更多資訊</a></li>
+        </ul>
+      </div>
+      
+        <div class="footer-info mx-auto">
+          <ul class="footer-contact d-flex flex-column mx-auto gap-6 mb-7 ps-3">
+            <li>客服信箱：<a href="mailto:Service@travel.com">Service@travel.com</a></li>
+            <li>客服專線：<a href="tel+886-09XX-XXX-XXX">09XX-XXX-XXX |平日9:00~18:00</a></li>
+            <li><p>聯絡地址：新北市板橋區仁愛路XXX號</p></li>
+          </ul>
+          <ul class="footer-icons d-flex justify-content-between align-items-center mx-auto mb-4">
+            <img src="/src/assets/img/indexImg/Icon_fb.png" alt="fb">
+            <img src="/src/assets/img/indexImg/Icon_ig.png" alt="ig">
+            <img src="/src/assets/img/indexImg/Icon_line.png" alt="line">
+          </ul>
+          <p class="">旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
+        </div>
+      
+    </div>
+  </footer>
+<!-- <div id="root"></div> -->
+<script type="module" src="/src/main.jsx"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  axios.get('http://localhost:3000/posts')
+  .then((res)=>{
+    console.log(res)
+  })
+  .catch((err)=>{
+    console.log(err)
+  })
+</script> -->
+</body>
+</html>

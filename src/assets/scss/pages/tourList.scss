@@ -1,0 +1,21 @@
+.banner {
+  background-image: url(/src/assets/img/otherImg/Rectangle\ 45.png);
+  height: 680px;
+  background-position: center;
+}
+.banner-content {
+  max-width: 432px;
+  padding-top: 279px;
+  padding-bottom: 279px;
+}
+.card {
+  height: 489px;
+  border-radius: 8px;
+  &-img-top{
+    height: 212px;
+  };
+  &-title{
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
