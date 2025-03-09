@@ -2,14 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
 @import "bootstrap/scss/functions";
-@import "./scss/helpers/variables";
+@import "./helpers/variables";
 @import "bootstrap/scss/bootstrap";
 
-@import "/src/assets/scss/helpers/mixins";
-@import "/src/assets/scss/helpers/utils";
-@import "/src/assets/scss/base/base";
+@import "/src/scss/helpers/mixins";
+@import "/src/scss/helpers/utils";
+@import "/src/scss/base/base";
 
-@import "/src/assets/scss/layout/header";
-@import "/src/assets/scss/layout/footer";
-@import "/src/assets/scss/pages/tourList.scss";
-@import "/src/assets/scss/pages/index"
+
+@import "/src/scss/pages/tourList.scss";

@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>2024_ReactProject_B-5</title>
 
-    <link rel="stylesheet" href="/src/assets/all.scss">
-    <style>
+    <link rel="stylesheet" href="./src/scss/all.scss">
+    <!-- <style>
       body {
         background-color: #e3f2f9;
         overflow-x: hidden; /* 防止水平滾動條 */
@@ -347,52 +346,21 @@
       }
   
   
-    </style>
+    </style> -->
   </head>
   <body>
-    <!-- Header -->
-<header>
-  <nav class="container d-flex justify-content-between align-items-center p-3">
-    <img src="/src/assets/img/indexImg/logo_green.png" class="img-fluid" alt="logo">
-
-    <!-- 電腦版導航項目 -->
-    <ul class="nav-items d-flex justify-content-between gap-4 align-items-center">
-      <li><a href="./src/pages/tourList.html" class="text-primary-700">旅途行程</a></li>
-      <li><a href="#" class="text-primary-700">拾光日誌</a></li>
-      <li><a href="#" class="text-primary-700">關於我們</a></li>
-    </ul>
-
-    <!-- 手機版漢堡菜單 -->
-    <div class="hamburger-menu d-block d-sm-none" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="material-symbols-outlined text-primary-700">menu</span>
-    </div>
-
-    <!-- 手機版折疊選單 -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link text-primary-700" href="#">旅途行程</a></li>
-        <li class="nav-item"><a class="nav-link text-primary-700" href="#">拾光日誌</a></li>
-        <li class="nav-item"><a class="nav-link text-primary-700" href="#">關於我們</a></li>
-      </ul>
-    </div>
-
-    <div class="d-flex gap-2"><span class="material-symbols-outlined text-primary-700">
-      shopping_cart
-    </span><span class="text-primary-700">登入</span></div>
-  </nav>
-</header>
-
+    
 <!-- Hero 區塊：背景圖片 -->
-<div class="hero">
+<!-- <div class="hero">
   <div class="container">
     <h1 class="display-4">旅途拾光</h1>
     <p class="lead">It's TIME for your journey</p>
     <a href="#search" class="btn btn-primary btn-lg">開始探索</a>
   </div>
-</div>
+</div> -->
 
   <!-- 搜尋區塊 -->
-  <div id="search" class="search-section">
+  <!-- <div id="search" class="search-section">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-10">
@@ -414,10 +382,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- 旅程行程 -->
-  <div id="journey" class="container mt-5">
+  <!-- <div id="journey" class="container mt-5">
     <h2 class="main-title text-center">旅途行程</h2>
     <div class="row justify-content-center mt-4">
       <div class="col-md-4">
@@ -456,10 +424,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- 拾光活動 -->
-  <div id="activity" class="container mt-5">
+  <!-- <div id="activity" class="container mt-5">
     <h2 class="main-title text-center">拾光活動</h2>
     <div class="row justify-content-center mt-4">
       <div class="col-md-4">
@@ -498,10 +466,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- 拾光日誌 -->
-  <div id="journal">
+  <!-- <div id="journal">
     <div class="title-container">
       <h2>拾光日誌</h2>
       <div>
@@ -518,10 +486,10 @@
         <button>繼續閱讀</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- 關於我們 -->
-  <div id="about">
+  <!-- <div id="about">
     <div class="title-container">
       <h2 class="main-title">關於我們</h2>
     </div>
@@ -543,45 +511,10 @@
       </div>
       <img src="/src/assets/img/關於我們_2.jpg" class="right-image" alt="服務介紹圖片">
     </div>
-  </div>
+  </div> -->
 
-  <!-- Footer -->
-<!-- Footer -->
-<footer>
-  <div class="container" style="width: 1920px; height: 488px; gap: 32px; padding-top: 64px; padding-right: 312px; padding-bottom: 64px; padding-left: 312px;">
-    <!-- Logo and links -->
-    <div class="footer-logo-links" style="width: 1296px; height: 120px; gap: 40px; display: flex; justify-content: space-between; align-items: center;">
-      <img src="/src/assets/img/indexImg/logo_white.png" alt="Logo" class="footer-logo">
-      <ul class="footer-links d-flex gap-4">
-        <li><a href="#" class="footer-link">聯絡我們</a></li>
-        <li><a href="#" class="footer-link">常見問題</a></li>
-        <li><a href="#" class="footer-link">更多資訊</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact information block -->
-    <div class="footer-contact-info" style="width: 388px; height: 208px; gap: 32px;">
-      <ul class="footer-contact d-flex flex-column gap-12">
-        <li><span>客服信箱：</span><a href="mailto:Service@travel.com">Service@travel.com</a></li>
-        <li><span>客服專線：</span><a href="tel+886-09XX-XXX-XXX">09XX-XXX-XXX |平日9:00~18:00</a></li>
-        <li><span>聯絡地址：</span>新北市板橋區仁愛路XXX號</li>
-      </ul>
-    </div>
-
-    <!-- Social media logos and footer text -->
-    <div class="footer-social-media" style="width: 388px; height: 80px; gap: 24px;">
-      <ul class="footer-icons d-flex justify-content-between align-items-center">
-        <li><img src="/src/assets/img/indexImg/Icon_fb.png" alt="fb" class="social-icon"></li>
-        <li><img src="/src/assets/img/indexImg/Icon_ig.png" alt="ig" class="social-icon"></li>
-        <li><img src="/src/assets/img/indexImg/Icon_line.png" alt="line" class="social-icon"></li>
-      </ul>
-      <p>旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
-    </div>
-  </div>
-</footer>
     
-    
-    <!-- <div id="root"></div> -->
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
