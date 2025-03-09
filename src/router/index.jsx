@@ -5,6 +5,7 @@ import TourList from "../pages/TourList";
 import TourInfo from "../pages/TourInfo";
 import NotFound from "../pages/NotFound";
 import Cart from "../pages/Cart";
+import Login from "../pages/Login";
 
 
 const router = createHashRouter([
@@ -16,11 +17,11 @@ const router = createHashRouter([
       element: <HomePage />
     },
     {
-      path: "products",
+      path: "tourList",
       element: <TourList />
     },
     {
-      path: "products/:id",
+      path: "tourInfo/:id",
       element: <TourInfo />
     },
     {
@@ -28,6 +29,10 @@ const router = createHashRouter([
       element: <Cart />
     }
   ]
+  },
+  {
+    path: "/login",
+    element: <Login />
   },
   {
     path: "*",
