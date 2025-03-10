@@ -5,7 +5,7 @@ body {
 
 a {
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
   transition: opacity 0.5s;
 }
@@ -30,3 +30,6 @@ ul {
   margin: 0;
 }
 
+body {
+  background: red !important;
+}

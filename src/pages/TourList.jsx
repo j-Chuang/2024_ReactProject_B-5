@@ -13,7 +13,7 @@ export default function TourList () {
         </div>
       </div>
       <main className="bg-primary-000">
-        <div className="container my-10">
+        <div className="container py-10">
           <div className="row">
             <section className="filters col-md-3 bg-grey-000 p-4">            
               <div className="mb-5">

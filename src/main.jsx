@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './scss/all.scss';
 
 createRoot(document.getElementById('root')).render(

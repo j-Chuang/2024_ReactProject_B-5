@@ -2,13 +2,16 @@
   background-image: url(/img/Rectangle\ 45.png);
   height: 680px;
   background-position: center;
+  background-size: cover;
 }
 .banner-content {
   max-width: 432px;
   padding-top: 279px;
   padding-bottom: 279px;
 }
-
+.filters {
+  align-self: flex-start; 
+}
 .card {
   height: 489px;
   border-radius: 8px;
