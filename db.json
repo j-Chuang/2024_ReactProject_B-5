@@ -1,0 +1,328 @@
+{
+  "tours": [
+    {
+    "id": 1,
+    "title": "台北市中心兩日遊",
+    "description": "台北擁有眾多古蹟與博物館，歷史建築數量全台之最，展現獨特的人文風情。",
+    "price": 4980,
+    "area": "台灣",
+    "type": "一日遊",
+    "theme": ["家族/團體旅遊", "文化體驗"],
+    "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true",
+    "people": "1~2人成行",
+    "detailed_schedule": {
+      "Day1": [
+        {
+          "time": "08:00",
+          "location": "集合 / 接送",
+          "content": "旅程從台北市區出發，專車將於指定地點迎接您，確保旅程舒適順利。車上將提供簡單行程介紹，讓您對接下來的景點有更深入的了解。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true"
+        },
+        {
+          "time": "10:00",
+          "location": "自由廣場 / 中正區",
+          "content": "首先，我們來到台北最具代表性的歷史地標—自由廣場。這裡擁有氣勢磅礡的中正紀念堂、大中至正門、國家音樂廳及戲劇院。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true"
+        },
+        {
+          "time": "12:00",
+          "location": "午餐 / OX 美食餐廳",
+          "content": "結束上午的歷史文化之旅後，來到以 創意台菜 著稱的 OX 美食餐廳 享用午餐。這間餐廳結合傳統台灣風味與現代西式料理手法，每一道菜都令人驚艷。餐廳環境優雅，適合一邊品嚐美食，一邊休息放鬆，補充體力迎接下午的行程。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_2.jpg?raw=true"
+        },
+        {
+          "time": "14:00",
+          "location": "台北 101 / 信義區",
+          "content": "觀景台體驗：搭乘全球最快速電梯，僅需 37 秒 便可登上 89 樓觀景台，俯瞰整座台北市，晴天時甚至可遠眺陽明山與淡水河口。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true"
+        },
+        {
+          "time": "16:00",
+          "location": "松山文創園區 / 信義區",
+          "content": "下一站，我們前往富有文藝氛圍的 松山文創園區。這裡原為日治時期的菸草工廠，如今搖身一變成為台北最具代表性的文化創意園區。這裡經常舉辦 設計展覽、手作市集、藝術裝置，讓旅客能夠感受台灣文創產業的活力。也可以逛逛園區內的特色書店、咖啡館，品味慢生活的悠閒時光。若您對 獨立設計品牌、手作工藝品、插畫藝術 感興趣，這裡絕對是不可錯過的好地方。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true"
+        },
+        {
+          "time": "18:00",
+          "location": "晚餐 / 饒河觀光夜市(自理)",
+          "content": "晚上，來到台北著名的饒河觀光夜市，這裡是台灣最具代表性的夜市之一，充滿濃厚的傳統市集氛圍。您可自由探索夜市，品嚐各種地道台灣小吃，感受最道地的台北夜晚。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true"
+        }
+      ],
+      "Day2": [
+        {
+          "time": "10:00",
+          "location": "抵達風景區",
+          "content": "享受美麗的自然風光，拍照留念，放鬆心情。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_2.jpg?raw=true"
+        },
+        {
+          "time": "22:00",
+          "location": "抵達飯店",
+          "content": "入住飯店，享受夜晚的寧靜。",
+          "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true"
+        }
+      ],
+      "notice":"團體或個人套裝行程商品適用中華民國交通部觀光局頒定之國內旅遊定型化契約書，當您完成預定時，即表示您同意並接受 國外旅遊定型化契約書之約定。"
+    }
+    },
+    {
+      "id": 2,
+      "title": "京都深度文化體驗｜和服體驗 & 抹茶茶道 & 清水寺巡禮",
+      "description": "穿上華美和服漫步京都古街，體驗抹茶茶道，最後參訪清水寺，感受歷史文化魅力。",
+      "price": 5500,
+      "area": "日本",
+      "type": "體驗活動",
+      "theme": ["文化體驗", "情人約會"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true",
+      "people": "2~4人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "09:00",
+            "location": "京都和服租借",
+            "content": "挑選並換上精美和服，專業人員協助穿戴，體驗傳統日式風格。",
+            "imageUrl": "https://example.com/kyoto_kimono.jpg"
+          },
+          {
+            "time": "11:00",
+            "location": "抹茶茶道體驗",
+            "content": "學習日本茶道禮儀，親手泡製抹茶，品味正宗日式風味。",
+            "imageUrl": "https://example.com/matcha.jpg"
+          },
+          {
+            "time": "14:00",
+            "location": "清水寺巡禮",
+            "content": "參觀世界文化遺產清水寺，欣賞京都的歷史建築與美景。",
+            "imageUrl": "https://example.com/kiyomizu.jpg"
+          }
+        ],
+        "notice": "請提前一天預約和服體驗，當天請準時抵達集合點。"
+      }
+    },
+    {
+      "id": 3,
+      "title": "北海道雪景滑雪五日遊",
+      "description": "沉浸於北海道純白雪景中，體驗刺激的滑雪運動，並享受溫泉泡湯放鬆身心。",
+      "price": 19800,
+      "area": "日本",
+      "type": "多日遊",
+      "theme": ["冬季推薦", "戶外運動", "家族/團體旅遊"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true",
+      "people": "2~6人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "10:00",
+            "location": "新千歲機場接機",
+            "content": "專車接送至飯店，準備開始精彩的滑雪之旅。",
+            "imageUrl": "https://example.com/hokkaido_airport.jpg"
+          },
+          {
+            "time": "15:00",
+            "location": "滑雪初體驗",
+            "content": "在專業教練指導下學習滑雪基本技巧，適合初學者。",
+            "imageUrl": "https://example.com/ski_beginner.jpg"
+          }
+        ],
+        "notice": "請準備好保暖衣物，滑雪裝備可現場租借。"
+      }
+    },
+    {
+      "id": 4,
+      "title": "阿爾卑斯山極致健行之旅",
+      "description": "挑戰壯麗的阿爾卑斯山健行步道，享受歐洲大自然的壯闊美景，適合戶外運動愛好者。",
+      "price": 15000,
+      "area": "歐洲",
+      "type": "多日遊",
+      "theme": ["戶外運動", "秋冬推薦"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true",
+      "people": "4~10人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "08:00",
+            "location": "集合出發",
+            "content": "搭乘專車前往阿爾卑斯山登山口，開始健行之旅。",
+            "imageUrl": "https://example.com/alps_start.jpg"
+          },
+          {
+            "time": "12:00",
+            "location": "午餐山中野餐",
+            "content": "在群山環繞的美景中享受簡單的野餐午餐。",
+            "imageUrl": "https://example.com/alps_lunch.jpg"
+          }
+        ],
+        "notice": "請穿著適合登山的裝備，攜帶充足的水與食物。"
+      }
+    },
+    {
+      "id": 5,
+      "title": "巴厘島海灘度假與瑜伽靜修",
+      "description": "沉浸於巴厘島的美麗海灘，體驗每日瑜伽課程，享受熱帶島嶼的悠閒時光。",
+      "price": 8500,
+      "area": "亞洲",
+      "type": "多日遊",
+      "theme": ["春夏推薦", "獨旅推薦", "情人約會"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_7.jpg?raw=true",
+      "people": "1~4人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "07:00",
+            "location": "日出海灘瑜伽",
+            "content": "在沙灘上迎接晨曦，進行舒緩的瑜伽練習。",
+            "imageUrl": "https://example.com/bali_yoga.jpg"
+          },
+          {
+            "time": "10:00",
+            "location": "巴厘島海灘自由活動",
+            "content": "可選擇游泳、浮潛或靜靜享受日光浴。",
+            "imageUrl": "https://example.com/bali_beach.jpg"
+          }
+        ],
+        "notice": "建議攜帶防曬用品與輕便衣物。"
+      }
+    },
+    {
+      "id": 6,
+      "title": "東京迪士尼奇幻之旅｜夢幻樂園與煙火秀",
+      "description": "走進夢幻世界，暢遊東京迪士尼樂園與迪士尼海洋，體驗經典遊樂設施與華麗的夜間煙火秀。",
+      "price": 7200,
+      "area": "日本",
+      "type": "一日遊",
+      "theme": ["家族/團體旅遊", "情人約會"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true",
+      "people": "2~6人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "09:00",
+            "location": "迪士尼樂園入園",
+            "content": "遊玩夢幻樂園、拍照打卡，體驗經典遊樂設施。",
+            "imageUrl": "https://example.com/disneyland.jpg"
+          },
+          {
+            "time": "19:00",
+            "location": "夜間煙火秀",
+            "content": "欣賞華麗的迪士尼燈光煙火表演，為美好的一天畫下完美句點。",
+            "imageUrl": "https://example.com/disney_fireworks.jpg"
+          }
+        ],
+        "notice": "建議提前預約熱門設施快速通關，請穿著舒適的步行鞋。"
+      }
+    },
+    {
+      "id": 7,
+      "title": "瑞士鐵道環遊之旅｜阿爾卑斯山美景饗宴",
+      "description": "搭乘瑞士著名的景觀列車，沿途欣賞阿爾卑斯山壯麗美景，走訪夢幻山城與湖泊風光。",
+      "price": 18800,
+      "area": "歐洲",
+      "type": "多日遊",
+      "theme": ["秋冬推薦", "戶外運動", "獨旅推薦"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true",
+      "people": "1~4人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "08:00",
+            "location": "黃金列車出發",
+            "content": "搭乘瑞士黃金列車，窗外美景如畫，穿越湖泊與群山。",
+            "imageUrl": "https://example.com/golden_train.jpg"
+          },
+          {
+            "time": "15:00",
+            "location": "策馬特小鎮散步",
+            "content": "抵達阿爾卑斯山下的策馬特小鎮，欣賞馬特洪峰的壯麗景色。",
+            "imageUrl": "https://example.com/zermatt.jpg"
+          }
+        ],
+        "notice": "建議攜帶保暖衣物，火車沿途無餐飲服務，請自行準備。"
+      }
+    },
+    {
+      "id": 8,
+      "title": "馬爾地夫豪華海島假期｜潛水體驗與日落巡航",
+      "description": "入住馬爾地夫水上別墅，探索海底世界，參與專業潛水活動，享受浪漫日落巡航。",
+      "price": 25000,
+      "area": "亞洲",
+      "type": "多日遊",
+      "theme": ["春夏推薦", "情人約會"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true",
+      "people": "2人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "10:00",
+            "location": "抵達馬爾地夫度假村",
+            "content": "入住私人水上別墅，享受無敵海景與私人泳池。",
+            "imageUrl": "https://example.com/maldives_resort.jpg"
+          },
+          {
+            "time": "16:00",
+            "location": "日落遊船巡航",
+            "content": "搭乘遊艇出海，欣賞壯麗日落美景，品嚐美味雞尾酒。",
+            "imageUrl": "https://example.com/maldives_sunset.jpg"
+          }
+        ],
+        "notice": "建議攜帶防曬用品，潛水裝備可於度假村租借。"
+      }
+    },
+    {
+      "id": 9,
+      "title": "冰島極光冒險｜藍湖溫泉與冰洞探險",
+      "description": "冬季限定的極光奇觀，探索冰島壯麗的冰洞秘境，在藍湖溫泉中放鬆身心。",
+      "price": 22000,
+      "area": "歐洲",
+      "type": "多日遊",
+      "theme": ["秋冬推薦", "戶外運動", "獨旅推薦"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true",
+      "people": "2~8人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "12:00",
+            "location": "藍湖溫泉泡湯",
+            "content": "在冰島著名的藍湖溫泉中泡湯，享受溫暖療癒的時光。",
+            "imageUrl": "https://example.com/blue_lagoon.jpg"
+          },
+          {
+            "time": "21:00",
+            "location": "極光觀賞之旅",
+            "content": "搭乘吉普車前往極光觀賞點，等待壯麗極光出現。",
+            "imageUrl": "https://example.com/northern_lights.jpg"
+          }
+        ],
+        "notice": "極光觀賞視天候狀況而定，請攜帶禦寒衣物。"
+      }
+    },
+    {
+      "id": 10,
+      "title": "台南文化探索｜安平古堡巡禮與小吃美食之旅",
+      "description": "探索台南歷史古蹟，參訪安平古堡與赤崁樓，品嚐道地台南小吃，感受台灣文化魅力。",
+      "price": 3200,
+      "area": "台灣",
+      "type": "一日遊",
+      "theme": ["文化體驗", "家族/團體旅遊"],
+      "imageUrl": "https://github.com/j-Chuang/2024_ReactProject_B-5/blob/gh-pages/img/Location_8.jpg?raw=true",
+      "people": "2~6人成行",
+      "detailed_schedule": {
+        "Day1": [
+          {
+            "time": "10:00",
+            "location": "安平古堡導覽",
+            "content": "由專業導覽員帶領，深入了解安平古堡的歷史與故事。",
+            "imageUrl": "https://example.com/anping_fort.jpg"
+          },
+          {
+            "time": "13:00",
+            "location": "台南小吃巡禮",
+            "content": "品嚐擔仔麵、蝦捲、豆花等經典台南美食。",
+            "imageUrl": "https://example.com/tainan_food.jpg"
+          }
+        ],
+        "notice": "當地天氣較為炎熱，建議攜帶帽子與防曬用品。"
+      }
+    }
+  ]
+}

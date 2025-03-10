@@ -1,4 +1,25 @@
+import axios from "axios"
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+
+
+
 export default function TourList () {
+
+  const [tourList, setTourList] = useState([]);
+
+  const getTours = async () => {
+    const res = await axios.get(`http://localhost:3000/tours`)
+    setTourList(res.data)
+    console.log(tourList)
+  }
+  
+  useEffect(() => {
+    getTours();
+  },[])
+
+
+
   return (
     <>
       <div className="banner">
@@ -83,8 +104,27 @@ export default function TourList () {
                     <option value="">價格低-高</option>
                   </select></div>
               </div>
-              <ul className="row g-4 mb-8">
-                <li className="col-md-6">
+
+              <ul className="row row-cols-sm-2 row-cols-1 g-4 mb-8">
+                {tourList.map((tour) => {
+                  return (
+                  <li className="col">
+                    <Link className="card p-0" target="_blank" to="/src/pages/tourInfo.html">
+                      <img src={tour.imageUrl} className="card-img-top object-fit" alt=""/>
+                      <div className="card-body d-flex flex-column p-4 text-primary-800">
+                        <h2 className="card-title mb-3 text-primary-900">{tour.title}</h2>
+                        <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
+                          location_on
+                          </span><span>{tour.area}</span><span> - </span><span>{tour.type}</span></div>
+                        <p className="card-text mb-4">{tour.description}</p>
+                        <span className="fs-5 text-secondary-700 fw-semibold mt-auto">{`NTD$ ${tour.price}`}</span>
+                      </div>
+                    </Link>
+                  </li>
+                  )
+                })}
+
+                {/* <li className="col-md-6">
                   <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
                     <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
                     <div className="card-body p-4 text-primary-800">
@@ -96,72 +136,7 @@ export default function TourList () {
                       <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
                     </div>
                   </a>
-                </li>
-                <li className="col-md-6">
-                  <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
-                    <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
-                    <div className="card-body p-4 text-primary-800">
-                      <h2 className="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
-                      <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
-                        location_on
-                        </span><span>日本</span><span> - </span><span>多日遊</span></div>
-                      <p className="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
-                      <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
-                    </div>
-                  </a>
-                </li>
-                <li className="col-md-6">
-                  <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
-                    <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
-                    <div className="card-body p-4 text-primary-800">
-                      <h2 className="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
-                      <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
-                        location_on
-                        </span><span>日本</span><span> - </span><span>多日遊</span></div>
-                      <p className="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
-                      <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
-                    </div>
-                  </a>
-                </li>
-                <li className="col-md-6">
-                  <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
-                    <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
-                    <div className="card-body p-4 text-primary-800">
-                      <h2 className="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
-                      <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
-                        location_on
-                        </span><span>日本</span><span> - </span><span>多日遊</span></div>
-                      <p className="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
-                      <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
-                    </div>
-                  </a>
-                </li>
-                <li className="col-md-6">
-                  <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
-                    <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
-                    <div className="card-body p-4 text-primary-800">
-                      <h2 className="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
-                      <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
-                        location_on
-                        </span><span>日本</span><span> - </span><span>多日遊</span></div>
-                      <p className="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
-                      <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
-                    </div>
-                  </a>
-                </li>
-                <li className="col-md-6">
-                  <a className="card p-0" target="_blank" href="/src/pages/tourInfo.html">
-                    <img src="./img/unsplash_UHcwyq05_Gk.png" className="card-img-top object-fit" alt=""/>
-                    <div className="card-body p-4 text-primary-800">
-                      <h2 className="card-title mb-3 text-primary-900">【冬季限定】銀山溫泉愜意3日遊：山形酒莊&銀山溫泉&狐...</h2>
-                      <div className="card-subtitle mb-3 d-flex align-items-center"><span className="material-symbols-outlined me-2">
-                        location_on
-                        </span><span>日本</span><span> - </span><span>多日遊</span></div>
-                      <p className="card-text mb-4">探案山形冬辱魅力！孕眼傅统清莊，品讓炖正清酒，深入了解 日本酒文化，漫步鷇山溫泉街，體驗木造老屋中的溫泉...</p>
-                      <span className="fs-5 text-secondary-700 fw-semibold">NTD$ 16,800</span>
-                    </div>
-                  </a>
-                </li>             
+                </li>*/}
               
               {/*<li className="col-6">
                   

@@ -1,0 +1,350 @@
+.home-banner {
+  background-image: url(/img/01_header.jpg);
+  height: 816;
+  background-position: center;
+  background-size: cover;
+}
+.home-banner-content {
+  max-width: 360px;
+  padding-top: 310px;
+  padding-bottom: 310px;
+}
+
+
+// body {
+//   background-color: #e3f2f9;
+//   overflow-x: hidden; /* 防止水平滾動條 */
+// }
+
+.hero {
+  background-image: url('/src/assets/img/01_header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+// .container {
+//   max-width: 1920px;
+//   margin: 0 auto;
+//   padding: 0 15px;
+// }
+
+/* 修正 nav bar */
+// header {
+//   background-color: #FCFCFC;
+//   color: white;
+//   width: 100%;
+//   padding-top: 16px;
+//   padding-right: 312px;
+//   padding-bottom: 16px;
+//   padding-left: 312px;
+//   border-bottom: 1px solid #000; /* 加入底線 */
+// }
+
+// header .nav-items a {
+//   color: #22727E;
+// }
+
+// header .nav-items a:hover {
+//   color: #ffcc00;
+// }
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+// .btn-primary {
+//   background-color: #00695c;
+//   border: none;
+// }
+
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 搜尋區域 */
+.search-section {
+  background-color: #CCE5E9;
+  padding-top: 40px;
+  padding-right: 312px;
+  padding-bottom: 40px;
+  padding-left: 312px;
+  gap: 64px;
+}
+
+.search-input {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search-input input {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #00695c;
+  border: none;
+  padding: 10px 20px;
+}
+
+/* 拾光日誌 */
+#journal {
+  width: 1920px;
+  height: 1174px;
+  padding-top: 120px;
+  padding-right: 312px;
+  padding-bottom: 120px;
+  padding-left: 312px;
+  gap: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container h2 {
+  font-family: "Noto Sans TC";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.6px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 64px;
+}
+
+.left-image {
+  width: 526px;
+  height: 720px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.middle-image {
+  width: 306px;
+  height: 355px;
+  border-radius: 8px;
+  object-fit: cover;
+  position: relative;
+  left: -100px;
+}
+
+.right-text {
+  width: 526px;
+  height: 720px;
+  padding-left: 56px;
+  gap: 32px;
+}
+
+.right-text h3 {
+  width: 470px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.right-text p {
+  width: 470px;
+  height: 384px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+.right-text button {
+  width: 110px;
+  height: 40px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  gap: 12px;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.right-text button:hover {
+  background-color: #004d40;
+}
+
+#about {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 80px;
+  padding-right: 312px;
+  padding-bottom: 80px;
+  padding-left: 312px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.about-title-container {
+  width: 192px;
+  height: 58px;
+  overflow: hidden;
+}
+
+.section-1, .section-2 {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.left-image, .right-image {
+  width: 100%;
+  max-width: 526px;
+  height: 760px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.right-text {
+  width: 100%;
+  max-width: 636px;
+  height: 760px;
+  gap: 32px;
+  padding-left: 56px;
+}
+
+.right-text p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.right-text h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #22727E;
+}
+
+.right-text button {
+  background-color: #00695c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.right-text button:hover {
+  background-color: #004d40;
+}
+
+/* Adjust footer layout */
+// footer {
+//   background-color: #00695c;
+//   color: white;
+//   padding: 40px 0;
+// }
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+// /* Logo and links */
+// .footer-logo-links {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 40px;
+//   width: 1296px;
+//   height: 120px;
+// }
+
+// .footer-logo {
+//   max-width: 200px;
+// }
+
+// .footer-links {
+//   display: flex;
+//   gap: 40px;
+// }
+
+// .footer-link {
+//   color: white;
+//   text-decoration: none;
+//   font-size: 16px;
+// }
+
+// .footer-link:hover {
+//   color: #ffcc00; /* Optional hover color */
+// }
+
+// /* Contact Information Block */
+// .footer-contact-info {
+//   width: 388px;
+//   height: 208px;
+//   gap: 32px;
+// }
+
+// .footer-contact {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 12px;
+//   font-size: 16px;
+//   color: white;
+// }
+
+// .footer-contact a {
+//   color: white;
+//   text-decoration: none;
+// }
+
+// /* Social Media and Footer Text */
+// .footer-social-media {
+//   width: 388px;
+//   height: 80px;
+//   gap: 24px;
+// }
+
+// .footer-icons {
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 24px;
+// }
+
+// .social-icon {
+//   width: 32px;
+//   height: 32px;
+//   object-fit: contain;
+// }
+
+// footer p {
+//   font-size: 14px;
+//   margin-top: 12px;
+// }
