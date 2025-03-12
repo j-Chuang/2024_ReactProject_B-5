@@ -1,76 +1,422 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>拾光旅途詳細資訊頁</title>
-    <link rel="stylesheet" href="./src/assets/all.scss">
+    <link rel="stylesheet" href="./src/assets/all.scss" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-</head>
-<body>
-    <!-- <%- include('header') %> -->
-    <div class="banner">
-        <img src="#" alt="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </head>
+  <body>
+    <!-- <% - include('header') %> -->
+    <div class="container mb-7">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/src/assets/img/tourinfoimg/Rectangle 35.jpg" class="d-block w-100" alt="旅遊相片">
+          </div>
+          <div class="carousel-item">
+            <img src="/src/assets/img/tourinfoimg/Rectangle 36.jpg" class="d-block w-100" alt="旅遊相片">
+          </div>
+          <div class="carousel-item">
+            <img src="/src/assets/img/tourinfoimg/Rectangle 37.jpg" class="d-block w-100" alt="旅遊相片">
+          </div>
+          <div class="carousel-item">
+            <img src="/src/assets/img/tourinfoimg/Rectangle 38.jpg" class="d-block w-100" alt="旅遊相片">
+          </div>
+          <div class="carousel-item">
+            <img src="/src/assets/img/tourinfoimg/Rectangle 39.jpg" class="d-block w-100" alt="旅遊相片">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <section class="container">
-        <div class="d-flex justify-content-between align-items-center mb-7">
-            <div class="d-flex align-items-center">
-                <h2 class="me-2 fs-1">台北市中心兩日遊</h2>
-                <div class="px-4 py-3">
-                    <span><i class="bi bi-heart me-2"></i>收藏行程</span>
-                </div>
-            </div>
-            <div>
-                <p><strong class="me-4">行程費用</strong><span class="text-secondary-700">NT$ 5,025</span></p>
-            </div>
+      <div class="d-flex justify-content-between align-items-center mb-7">
+        <div class="d-flex align-items-center">
+          <h2 class="me-2 fs-1">台北市中心兩日遊</h2>
+          <div class="px-4 py-3">
+            <span><i class="bi bi-heart me-2 text-red-900"></i>收藏行程</span>
+          </div>
         </div>
-        <div class="d-flex justify-content-between mb-7">
-            <span class="d-flex">
-                <i class="bi bi-star-fill me-2"></i>
-                <i class="bi bi-star-fill me-2"></i>
-                <i class="bi bi-star-fill me-2"></i>
-                <i class="bi bi-star-fill me-2"></i>
-                <i class="bi bi-star-fill me-2"></i>
-                <p>4.7 / 5 <a href="#">(21)</a></p>
-            </span>
-            <div>
-                <span class="me-4"><i class="bi bi-geo-alt me-2"></i>台北市區</span>
-                <span class="me-4"><i class="bi bi-calendar4-week me-2"></i>一日遊</span>
-                <span class="me-4"><i class="bi bi-tag-fill me-2"></i>主題旅遊 </span>
-                <span><i class="bi bi-people-fill me-2"></i>1-2 人成行</span>
-            </div>
+        <div class="d-md-flex d-none d-md-block align-items-center">
+          <p><strong class="me-4">行程費用</strong></p>
+          <span class="text-secondary-700 fs-7">NT$ 5,025</span>
         </div>
-        <div class="d-flex bg-primary-100 mb-7 p-4">
-            <p class="mr-4">特色說明</p>
-            <p>臺北市擁有20處國定古蹟、184處直轄市定古蹟、342處歷史建築、5處紀念建築等許多人文景觀，古蹟與博物館兩者數量均居臺灣首位，同時存在著有別於其他城市的特殊風情。</p>
-        </div>
+      </div>
+      <div class="d-flex justify-content-between mb-7">
+        <span class="d-flex">
+          <i class="bi bi-star-fill me-2 text-secondary"></i>
+          <i class="bi bi-star-fill me-2 text-secondary"></i>
+          <i class="bi bi-star-fill me-2 text-secondary"></i>
+          <i class="bi bi-star-fill me-2 text-secondary"></i>
+          <i class="bi bi-star-fill me-2 text-secondary"></i>
+          <p>4.7 / 5 <a href="#">(21)</a></p>
+        </span>
+        <ul class="d-flex line-inline line-inline-item">
+          <li class="line-inline-item me-4">
+            <i class="bi bi-geo-alt me-2"></i>台北市區
+          </li>
+          <li class="line-inline-item me-4">
+            <i class="bi bi-calendar4-week me-2"></i>一日遊
+          </li>
+          <li class="line-inline-item me-4">
+            <i class="bi bi-tag-fill me-2"></i>主題旅遊
+          </li>
+          <li class="line-inline-item me-4">
+            <i class="bi bi-people-fill me-2"></i>1-2 人成行
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-primary-100 mb-7 p-4">
+        <dl class="row">
+          <dt class="col-sm-1 mr-4 fs-8">特色說明</dt>
+          <dd class="col-sm-11 fs-8">
+            臺北市擁有20處國定古蹟、184處直轄市定古蹟、342處歷史建築、5處紀念建築等許多人文景觀，古蹟與博物館兩者數量均居臺灣首位，同時存在著有別於其他城市的特殊風情。
+          </dd>
+        </dl>
+      </div>
     </section>
 
     <section class="container">
-        <div class="row">
-            <div class="col-7">
-                <h4 class="mb-7">詳細行程</h4>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                      <li class="page-item me-4 page-item active"><a class="page-link px-3 py-2" href="#">Day1</a></li>
-                      <li class="page-item me-4"><a class="page-link px-3 py-2" href="#">Day2</a></li>
-                      <li class="page-item"><a class="page-link px-3 py-2" href="#">注意事項</a></li>
-                    </ul>
-                  </nav>
+      <div class="row">
+        <div class="col-7">
+            <div class="mb-8">
+                <div class="mb-8">
+                    <h4 class="mb-7">詳細行程</h4>
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item me-4 page-item active">
+                          <a class="page-link px-3 py-2" href="#">Day1</a>
+                        </li>
+                        <li class="page-item me-4">
+                          <a class="page-link px-3 py-2" href="#">Day2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link px-3 py-2" href="#">注意事項</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">08:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">集合 / 接送</p>
+                        <p class="text-primary-800">
+                          旅程從台北市區出發，專車將於指定地點迎接您，確保旅程舒適順利。車上將提供簡單行程介紹，讓您對接下來的景點有更深入的了解。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_C-zgN_LEKb8.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">10:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">自由廣場 / 中正區</p>
+                        <p class="text-primary-800 mb-3">
+                          首先，我們來到台北最具代表性的歷史地標—自由廣場。這裡擁有氣勢磅礡的中正紀念堂、大中至正門、國家音樂廳及戲劇院。
+                        </p>
+                        <p class="text-primary-800">
+                          您可沿著廣場悠閒散步，欣賞傳統中國宮殿式建築的壯麗美感。若時間允許，還能觀看
+                          衛兵交接儀式，這是台灣總統府儀隊的標誌性儀式，整齊劃一的動作令人印象深刻。
+                          可拍攝壯觀的藍白建築與台北城市景色，留下美好回憶。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_NhcS1Ax3ii4.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">12:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">午餐 / OX 美食餐廳</p>
+                        <p class="text-primary-800 mb-3">
+                          結束上午的歷史文化之旅後，來到以 創意台菜 著稱的 OX 美食餐廳
+                          享用午餐。這間餐廳結合傳統台灣風味與現代西式料理手法，每一道菜都令人驚艷。餐廳環境優雅，適合一邊品嚐美食，一邊休息放鬆，補充體力迎接下午的行程。
+                        </p>
+                        <p class="text-primary-800">
+                          特色推薦：經典滷肉飯、創意鳳梨蝦球、炙燒牛小排。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_YRQAcYcBECw.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">14:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">台北 101 / 信義區</p>
+                        <p class="text-primary-800 mb-3">
+                          下午，我們來到台北的標誌性建築 台北
+                          101，這座曾是世界最高摩天大樓的地標，不僅代表台灣的建築奇蹟，也是一座時尚購物與美食天堂。
+                        </p>
+                        <p class="text-primary-800 mb-3">
+                          觀景台體驗：搭乘全球最快速電梯，僅需 37 秒 便可登上 89
+                          樓觀景台，俯瞰整座台北市，晴天時甚至可遠眺陽明山與淡水河口。
+                        </p>
+                        <p class="text-primary-800 mb-3">
+                          購物天堂：101
+                          商場內匯集全球知名品牌，從精品服飾、香水、科技產品到伴手禮，應有盡有。
+                        </p>
+                        <p class="text-primary-800">
+                          101 附近步行景點：逛完 101，可以步行至
+                          象山登山步道，感受自然與城市融合的美景。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_Q-Dh_OjmVKw.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">16:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">
+                          松山文創園區 / 信義區
+                        </p>
+                        <p class="text-primary-800">
+                          下一站，我們前往富有文藝氛圍的
+                          松山文創園區。這裡原為日治時期的菸草工廠，如今搖身一變成為台北最具代表性的文化創意園區。
+                          這裡經常舉辦
+                          設計展覽、手作市集、藝術裝置，讓旅客能夠感受台灣文創產業的活力。也可以逛逛園區內的特色書店、咖啡館，品味慢生活的悠閒時光。若您對
+                          獨立設計品牌、手作工藝品、插畫藝術
+                          感興趣，這裡絕對是不可錯過的好地方。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_nWAlCB1tyvc.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mb-8">
+                    <div class="d-flex me-8">
+                      <div>
+                        <p class="text-primary-900 me-4 fs-6 fw-bold">18:00</p>
+                      </div>
+                      <div>
+                        <p class="text-primary-900 fs-6 fw-bold">
+                          晚餐 / 饒河觀光夜市(自理)
+                        </p>
+                        <p class="text-primary-800 mb-3">
+                          晚上，來到台北著名的饒河觀光夜市，這裡是台灣最具代表性的夜市之一，充滿濃厚的傳統市集氛圍。您可自由探索夜市，品嚐各種地道台灣小吃，感受最道地的台北夜晚。
+                        </p>
+                        <p class="text-primary-800">
+                          必吃推薦：胡椒餅、牛肉麵、珍珠奶茶。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="">
+                      <img
+                        class="journey-img"
+                        src="/src/assets/img/tourinfoimg/unsplash_gTvz-t7D1Aw.jpg"
+                        alt="旅遊圖片"
+                      />
+                    </div>
+                  </div>
             </div>
-            <div class="col-5">
-                <p>jfi </p>
+            <div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-primary-900 fs-8 fw-bold">會員評分</p>
+                    <span class="d-flex align-items-center">
+                        <i class="bi bi-star-fill me-2 text-secondary fs-3"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary fs-3"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary fs-3"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary fs-3"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary fs-3 me-6"></i>
+                        <p class="text-primary-900 fs-5 me-2">4.7 / 5</p>
+                        <a href="#" class="d-block fs-8">(21)</a>
+                      </span>
+                </div>
+                <hr class="my-7">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <span class="d-flex align-items-center mb-3">
+                            <img class="me-6" src="/src/assets/img/tourinfoimg/avatar/avatar001.jpg" alt="會員頭像">
+                            <p class="me-6 text-grey-700 fw-bold">Jessica</p>
+                            <p class="text-grey-500">一個月</p>
+                        </span>
+                        <span class="d-flex">
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star text-secondary"></i>
+                          </span>
+                    </div>
+                    <div class="ps-11">
+                        <p class="text-grey-600 mb-3">這趟行程完美結合了 歷史、人文與現代都市 的魅力！從壯觀的 自由廣場 到 台北 101，再到充滿藝術氣息的 松山文創園區，每個地方都讓我流連忘返。我最喜歡的部分是導遊詳細介紹台灣的歷史，讓我對這座城市有更深刻的理解。晚上去 饒河夜市 自由探索美食也很棒，第一次吃到 胡椒餅，真的超級美味！</p>
+                        <img class="img-reviews" src="/src/assets/img/tourinfoimg/unsplash_5m06LSoKUco.jpg" alt="照片分享">
+                    </div>
+                </div>
+                <hr class="my-7">
+                <div>
+                  <div class="d-flex justify-content-between">
+                      <span class="d-flex align-items-center mb-3">
+                          <img class="me-6" src="/src/assets/img/tourinfoimg/avatar/avatar002.jpg" alt="會員頭像">
+                          <p class="me-6 text-grey-700 fw-bold">Cameron</p>
+                          <p class="text-grey-500">一個月</p>
+                      </span>
+                      <span class="d-flex">
+                          <i class="bi bi-star-fill me-2 text-secondary"></i>
+                          <i class="bi bi-star-fill me-2 text-secondary"></i>
+                          <i class="bi bi-star-fill me-2 text-secondary"></i>
+                          <i class="bi bi-star-fill me-2 text-secondary"></i>
+                          <i class="bi bi-star-fill text-secondary"></i>
+                        </span>
+                  </div>
+                  <div class="ps-11">
+                      <p class="text-grey-600 mb-3">這趟旅程絕對是 美食天堂！午餐在 OX 餐廳 享用了創意台菜，完全顛覆了我對台灣料理的想像。晚上到 饒河夜市 更是讓我驚喜連連，從 牛肉麵、蚵仔煎、珍珠奶茶 到 胡椒餅，每一樣都超有水準！導遊也很貼心，推薦了隱藏版美食，像是一家特別的 滷味攤，超級入味！</p>
+                      <!-- <img class="img-reviews" src="" alt="照片分享"> -->
+                  </div>
+              </div>
+              <hr class="my-7">
+              <div>
+                <div class="d-flex justify-content-between">
+                    <span class="d-flex align-items-center mb-3">
+                        <img class="me-6" src="/src/assets/img/tourinfoimg/avatar/avatar003.jpg" alt="會員頭像">
+                        <p class="me-6 text-grey-700 fw-bold">Brandie</p>
+                        <p class="text-grey-500">一個月</p>
+                    </span>
+                    <span class="d-flex">
+                        <i class="bi bi-star-fill me-2 text-secondary"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary"></i>
+                        <i class="bi bi-star-fill me-2 text-secondary"></i>
+                        <i class="bi bi-star-fill text-secondary"></i>
+                      </span>
+                </div>
+                <div class="ps-11">
+                    <p class="text-grey-600 mb-3">這次的旅程讓我們對台北留下深刻印象！整體行程安排得很棒，從歷史景點到現代都市，都能感受到這座城市的獨特魅力。我們特別喜歡 台北 101 的觀景台，能夠俯瞰整個城市，真的太壯觀了！而且 松山文創園區 讓我們發現很多台灣獨立設計品牌，還買了一些特色手工藝品作為紀念品。我們一定會推薦給朋友來參加！</p>
+                    <!-- <img class="img-reviews" src="#" alt="照片分享"> -->
+                </div>
+            </div>
+            <hr class="my-7">
+            <div>
+                    <div class="d-flex justify-content-between">
+                        <span class="d-flex align-items-center mb-3">
+                            <img class="me-6" src="/src/assets/img/tourinfoimg/avatar/avatar004.jpg" alt="會員頭像">
+                            <p class="me-6 text-grey-700 fw-bold">Wade</p>
+                            <p class="text-grey-500">一個月</p>
+                        </span>
+                        <span class="d-flex">
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill me-2 text-secondary"></i>
+                            <i class="bi bi-star-fill text-secondary"></i>
+                          </span>
+                    </div>
+                    <div class="ps-11">
+                        <p class="text-grey-600 mb-3">這對於喜歡拍照的我來說，這個行程超級適合！📸 自由廣場 的壯觀建築、台北 101 夜景、松山文創園區的設計感，到處都是美拍好地方！最棒的是，在饒河夜市裡，我還拍到了很多地道的台灣街頭風景，像是小吃攤前排隊的人潮、燈籠高掛的街道，超級有氛圍！希望下次還能來探索更多台北的美景！</p>
+                        <img class="img-reviews" src="/src/assets/img/tourinfoimg/unsplash_AEKdzZn_bBI.jpg" alt="照片分享">
+                    </div>
+                </div>
+                <hr class="my-7">
+            </div>
+            <button type="button" class="btn w-100 py-2 text-primary-700 border-grey-400 rounded mb-4">查看所有評論 (21)</button>
+        </div>
+
+        <div class="col-5 ">
+            <div class="p-4 border border-primary rounded">
+                <div class="mb-7">
+                    <label class="d-block text-grey-700" for="starDate">出發日期</label>
+                    <input type="text" id="starDate" placeholder="請選擇日期">
+                  </div>
+                  <div class="w-100 mb-7">
+                    <label class="d-block " for="peopleNum">人數</label>
+                    <select class="w-100" name="peopleNum" id="peopleNum">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="else">多人，請洽客服</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center w-100 mb-7">
+                    <p class="text-primary-700 fw-bold">總金額</p>
+                    <p class="fs-7 text-secondary-700">NTD$ 4,980</p>
+                  </div>
+                  <div>
+                    <button type="button" class="bg-primary-700 text-secondary-100 w-100 py-3 rounded"> + 加入購物車</button>
+                  </div> 
             </div>
         </div>
-       
-    </section>
-    
+      </div>
 
+      
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("#starDate", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            disableMobile: true,
+            static: true
+        });
+    </script>
     <script type="module" src="/src/main.jsx"></script>
     <script src=""></script>
-</body>
+  </body>
 </html>
