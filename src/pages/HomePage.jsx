@@ -59,7 +59,7 @@ function HomePage () {
           <div className="container">
             <section className='py-10'>
               <div className='d-flex justify-content-between mb-7 mb-lg-10'>
-                <h2 className="align-middle">旅遊行程</h2>
+                <h2 className="align-middle text-primary-900">旅遊行程</h2>
                 <button className="more-info-btn btn btn-grey-000 text-primary-700">查看更多</button>
               </div>
               <div className="row">
@@ -135,7 +135,7 @@ function HomePage () {
       {/* <!-- 拾光活動 --> */}
       <section className='py-10'>
         <div className='d-flex justify-content-between mb-7 mb-lg-10'>
-          <h2 className="align-middle">拾光活動</h2>
+          <h2 className="align-middle text-primary-900">拾光活動</h2>
           <button className="more-info-btn btn btn-grey-000 text-primary-700">查看更多</button>
         </div>
         <div className="row">
@@ -252,7 +252,7 @@ function HomePage () {
             <h2 className="text-center text-primary-900 mb-8 mb-lg-10">關於我們</h2>
             <div className="row flex-column justify-content-lg-between flex-lg-row g-8 mb-8 mb-lg-10">
               <div className="col-lg-5">
-                <img src="/img/關於我們_1.jpg" alt="" className="object-fit home-about-pic" />
+                <img src="./img/關於我們_1.jpg" alt="" className="object-fit home-about-pic" />
               </div>
               <div className="col-lg-6 d-flex align-items-center">
               <div className="text-primary-800">
@@ -270,7 +270,7 @@ function HomePage () {
             </div>
             <div className="row flex-column justify-content-lg-between flex-lg-row-reverse g-8">
               <div className="col-lg-5">
-                <img src="/img/關於我們_2.jpg" alt="" className="object-fit home-about-pic" />
+                <img src="./img/關於我們_2.jpg" alt="" className="object-fit home-about-pic" />
               </div>
               <div className="col-lg-6 d-flex align-items-center">
               <div className="text-primary-800">

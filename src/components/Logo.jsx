@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 const Logo = () => {
-  const [logo, setLogo] = useState("/icon/logo_mountain_green.png");
+  const [logo, setLogo] = useState("./icon/logo_mountain_green.png");
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 992) {
-        setLogo("/icon/logo_green.png");
+        setLogo("./icon/logo_green.png");
       } else {
-        setLogo("/icon/logo_mountain_green.png");
+        setLogo("./icon/logo_mountain_green.png");
       }
     };
 

@@ -8,10 +8,10 @@ const navMenu = [
 ];
 
 const memberMenu = [
-  { path: "/tourList", name: "會員資訊", img: "/icon/user.png" },
-  { path: "/tourList", name: "我的收藏", img: "/icon/bookmark.png" },
-  { path: "/tourList", name: "訂單管理", img: "/icon/shipping_truck.png" },
-  { path: "/tourList", name: "會員登出", img: "/icon/logout.png" },
+  { path: "/tourList", name: "會員資訊", img: "./icon/user.png" },
+  { path: "/tourList", name: "我的收藏", img: "./icon/bookmark.png" },
+  { path: "/tourList", name: "訂單管理", img: "./icon/shipping_truck.png" },
+  { path: "/tourList", name: "會員登出", img: "./icon/logout.png" },
 ];
 
 function Navbar () {
@@ -27,14 +27,14 @@ function Navbar () {
           </ul>
           <div className="d-flex align-items-center gap-2">
             <NavLink to="/cart" className="cart-icon d-flex justify-content-center align-items-center" >
-              <img src="/icon/cart.png" alt="" />
+              <img src="./icon/cart.png" alt="" />
             </NavLink>
             <NavLink to="/login"><span className="log-in text-primary-700 px-3 py-2">登入</span></NavLink>
               <div className="dropdown">
                 <button className="btn dropdown-toggle text-center p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img className="me-2" src="/icon/avatar.png" alt="" />
+                  <img className="me-2" src="./icon/avatar.png" alt="" />
                   <span className="me-2 text-primary-700 fw-semibold">Jennie</span>
-                  <img src="/icon/arrow_down.png" alt="" />
+                  <img src="./icon/arrow_down.png" alt="" />
                 </button>
                 <ul className="dropdown-menu dropdown-menu-end text-primary-700 bg-grey-000 py-2">
                   {memberMenu.map(item => {
