@@ -109,7 +109,7 @@ export default function TourList () {
                 {tourList.map((tour) => {
                   return (
                   <li className="col">
-                    <Link className="card p-0" target="_blank" to="/src/pages/tourInfo.html">
+                    <Link className="card card-list p-0" target="_blank" to="/src/pages/tourInfo.html">
                       <img src={tour.imageUrl} className="card-img-top object-fit" alt=""/>
                       <div className="card-body d-flex flex-column p-4 text-primary-800">
                         <h2 className="card-title mb-3 text-primary-900">{tour.title}</h2>

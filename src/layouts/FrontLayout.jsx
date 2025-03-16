@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 import Navbar from "../components/NavBar"
 import Footer from "../components/Footer"
 
-export default function FrontLayout () {
+function FrontLayout () {
   return (
     <>
       <Navbar />
@@ -13,3 +13,5 @@ export default function FrontLayout () {
     </>
   )
 }
+
+export default FrontLayout;

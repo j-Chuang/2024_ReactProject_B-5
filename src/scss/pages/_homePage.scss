@@ -1,14 +1,84 @@
 .home-banner {
   background-image: url(/img/01_header.jpg);
-  height: 816;
+  height: 732px;
   background-position: center;
   background-size: cover;
+  @include media-breakpoint-up(lg) { 
+    height: 816px;
+  }
 }
 .home-banner-content {
   max-width: 360px;
-  padding-top: 310px;
-  padding-bottom: 310px;
 }
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.nav-link {
+  border-bottom: 2px solid transparent;
+  &:hover, &:active {
+    color: $primary-800;
+    border-bottom: 2px solid $primary-800;
+  }
+
+}
+
+.more-info-btn {
+  border: 1px solid $gray-400;
+}
+
+.bg-dark-mount {
+  background-image: url(/icon/dark_mount.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-light-mount {
+  background-image: url(/icon/light_mount.png);
+  background-position: -160px 340px;
+  background-repeat: no-repeat;
+  left: -160px;
+  top: 340px;
+}
+
+.card-home {
+  .card-body {
+    border-top: 1px solid #A56948;
+  }
+}
+
+.home-arti-pic-lg {
+  height: 360px;
+  background-image: url(/img/unsplash_9BcbudNYCHg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  @include media-breakpoint-up(lg) { 
+    height: 720px;
+  }
+}
+
+.home-arti-pic-sm {
+  background-image: url(/img/unsplash_zOecLC4vpSs.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  height: 56%;
+  width: 47.5%;
+  right: 0;
+  bottom: 10%;
+}
+
+.home-about-pic {
+  border-radius: 8px;
+  @include media-breakpoint-down(lg) { 
+    height: 240px;
+  }
+}
+
+
 
 
 // body {
@@ -16,252 +86,252 @@
 //   overflow-x: hidden; /* 防止水平滾動條 */
 // }
 
-.hero {
-  background-image: url('/src/assets/img/01_header.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-// .container {
-//   max-width: 1920px;
-//   margin: 0 auto;
-//   padding: 0 15px;
-// }
-
-/* 修正 nav bar */
-// header {
-//   background-color: #FCFCFC;
+// .hero {
+//   background-image: url('/src/assets/img/01_header.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 //   color: white;
-//   width: 100%;
-//   padding-top: 16px;
+//   text-align: center;
+// }
+
+// // .container {
+// //   max-width: 1920px;
+// //   margin: 0 auto;
+// //   padding: 0 15px;
+// // }
+
+// /* 修正 nav bar */
+// // header {
+// //   background-color: #FCFCFC;
+// //   color: white;
+// //   width: 100%;
+// //   padding-top: 16px;
+// //   padding-right: 312px;
+// //   padding-bottom: 16px;
+// //   padding-left: 312px;
+// //   border-bottom: 1px solid #000; /* 加入底線 */
+// // }
+
+// // header .nav-items a {
+// //   color: #22727E;
+// // }
+
+// // header .nav-items a:hover {
+// //   color: #ffcc00;
+// // }
+
+// .main-title {
+//   font-size: 2rem;
+//   font-weight: bold;
+// }
+
+// // .btn-primary {
+// //   background-color: #00695c;
+// //   border: none;
+// // }
+
+// .card {
+//   margin-bottom: 30px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
+
+// .card .card-title {
+//   font-weight: bold;
+// }
+
+// .card-img-top {
+//   height: 200px;
+//   object-fit: cover;
+// }
+
+// /* 搜尋區域 */
+// .search-section {
+//   background-color: #CCE5E9;
+//   padding-top: 40px;
 //   padding-right: 312px;
-//   padding-bottom: 16px;
+//   padding-bottom: 40px;
 //   padding-left: 312px;
-//   border-bottom: 1px solid #000; /* 加入底線 */
+//   gap: 64px;
 // }
 
-// header .nav-items a {
-//   color: #22727E;
+// .search-input {
+//   width: 200px;
+//   margin-right: 10px;
 // }
 
-// header .nav-items a:hover {
-//   color: #ffcc00;
+// .search-input input {
+//   width: 100%;
 // }
-
-.main-title {
-  font-size: 2rem;
-  font-weight: bold;
-}
 
 // .btn-primary {
 //   background-color: #00695c;
 //   border: none;
+//   padding: 10px 20px;
 // }
 
-.card {
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+// /* 拾光日誌 */
+// #journal {
+//   width: 1920px;
+//   height: 1174px;
+//   padding-top: 120px;
+//   padding-right: 312px;
+//   padding-bottom: 120px;
+//   padding-left: 312px;
+//   gap: 80px;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.card .card-title {
-  font-weight: bold;
-}
+// .title-container h2 {
+//   font-family: "Noto Sans TC";
+//   font-weight: 700;
+//   font-size: 48px;
+//   line-height: 57.6px;
+// }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
+// .content {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   width: 100%;
+//   gap: 64px;
+// }
 
-/* 搜尋區域 */
-.search-section {
-  background-color: #CCE5E9;
-  padding-top: 40px;
-  padding-right: 312px;
-  padding-bottom: 40px;
-  padding-left: 312px;
-  gap: 64px;
-}
+// .left-image {
+//   width: 526px;
+//   height: 720px;
+//   border-radius: 8px;
+//   object-fit: cover;
+// }
 
-.search-input {
-  width: 200px;
-  margin-right: 10px;
-}
+// .middle-image {
+//   width: 306px;
+//   height: 355px;
+//   border-radius: 8px;
+//   object-fit: cover;
+//   position: relative;
+//   left: -100px;
+// }
 
-.search-input input {
-  width: 100%;
-}
+// .right-text {
+//   width: 526px;
+//   height: 720px;
+//   padding-left: 56px;
+//   gap: 32px;
+// }
 
-.btn-primary {
-  background-color: #00695c;
-  border: none;
-  padding: 10px 20px;
-}
+// .right-text h3 {
+//   width: 470px;
+//   font-size: 24px;
+//   font-weight: bold;
+// }
 
-/* 拾光日誌 */
-#journal {
-  width: 1920px;
-  height: 1174px;
-  padding-top: 120px;
-  padding-right: 312px;
-  padding-bottom: 120px;
-  padding-left: 312px;
-  gap: 80px;
-  display: flex;
-  flex-direction: column;
-}
+// .right-text p {
+//   width: 470px;
+//   height: 384px;
+//   font-family: "Noto Sans TC", sans-serif;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 24px;
+//   color: white;
+// }
 
-.title-container h2 {
-  font-family: "Noto Sans TC";
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 57.6px;
-}
+// .right-text button {
+//   width: 110px;
+//   height: 40px;
+//   padding-top: 8px;
+//   padding-right: 16px;
+//   padding-bottom: 8px;
+//   padding-left: 16px;
+//   gap: 12px;
+//   border-radius: 8px;
+//   border-width: 1px;
+//   background-color: #00695c;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+// }
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 64px;
-}
+// .right-text button:hover {
+//   background-color: #004d40;
+// }
 
-.left-image {
-  width: 526px;
-  height: 720px;
-  border-radius: 8px;
-  object-fit: cover;
-}
+// #about {
+//   width: 100%;
+//   max-width: 1920px;
+//   height: auto;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 80px;
+//   padding-top: 80px;
+//   padding-right: 312px;
+//   padding-bottom: 80px;
+//   padding-left: 312px;
+//   background-color: #f8f9fa;
+//   box-sizing: border-box;
+// }
 
-.middle-image {
-  width: 306px;
-  height: 355px;
-  border-radius: 8px;
-  object-fit: cover;
-  position: relative;
-  left: -100px;
-}
+// .about-title-container {
+//   width: 192px;
+//   height: 58px;
+//   overflow: hidden;
+// }
 
-.right-text {
-  width: 526px;
-  height: 720px;
-  padding-left: 56px;
-  gap: 32px;
-}
+// .section-1, .section-2 {
+//   width: 100%;
+//   max-width: 1920px;
+//   display: flex;
+//   gap: 12px;
+//   box-sizing: border-box;
+// }
 
-.right-text h3 {
-  width: 470px;
-  font-size: 24px;
-  font-weight: bold;
-}
+// .left-image, .right-image {
+//   width: 100%;
+//   max-width: 526px;
+//   height: 760px;
+//   border-radius: 8px;
+//   object-fit: cover;
+// }
 
-.right-text p {
-  width: 470px;
-  height: 384px;
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: white;
-}
+// .right-text {
+//   width: 100%;
+//   max-width: 636px;
+//   height: 760px;
+//   gap: 32px;
+//   padding-left: 56px;
+// }
 
-.right-text button {
-  width: 110px;
-  height: 40px;
-  padding-top: 8px;
-  padding-right: 16px;
-  padding-bottom: 8px;
-  padding-left: 16px;
-  gap: 12px;
-  border-radius: 8px;
-  border-width: 1px;
-  background-color: #00695c;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+// .right-text p {
+//   font-family: "Noto Sans TC", sans-serif;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 24px;
+//   letter-spacing: 0%;
+//   color: #333;
+//   box-sizing: border-box;
+// }
 
-.right-text button:hover {
-  background-color: #004d40;
-}
+// .right-text h3 {
+//   font-size: 24px;
+//   font-weight: bold;
+//   color: #22727E;
+// }
 
-#about {
-  width: 100%;
-  max-width: 1920px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding-top: 80px;
-  padding-right: 312px;
-  padding-bottom: 80px;
-  padding-left: 312px;
-  background-color: #f8f9fa;
-  box-sizing: border-box;
-}
+// .right-text button {
+//   background-color: #00695c;
+//   color: white;
+//   padding: 10px 20px;
+//   border: none;
+//   cursor: pointer;
+// }
 
-.about-title-container {
-  width: 192px;
-  height: 58px;
-  overflow: hidden;
-}
-
-.section-1, .section-2 {
-  width: 100%;
-  max-width: 1920px;
-  display: flex;
-  gap: 12px;
-  box-sizing: border-box;
-}
-
-.left-image, .right-image {
-  width: 100%;
-  max-width: 526px;
-  height: 760px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.right-text {
-  width: 100%;
-  max-width: 636px;
-  height: 760px;
-  gap: 32px;
-  padding-left: 56px;
-}
-
-.right-text p {
-  font-family: "Noto Sans TC", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  color: #333;
-  box-sizing: border-box;
-}
-
-.right-text h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #22727E;
-}
-
-.right-text button {
-  background-color: #00695c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.right-text button:hover {
-  background-color: #004d40;
-}
+// .right-text button:hover {
+//   background-color: #004d40;
+// }
 
 /* Adjust footer layout */
 // footer {

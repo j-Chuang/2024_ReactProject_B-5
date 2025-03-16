@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom"
 
-export default function Footer () {
+function Footer () {
   return (
     <>
       <footer className="bg-primary-900">
         <div className="container text-grey-000 py-9">
-          <div className="d-flex flex-column gap-7 mb-7">
+          <div className="d-flex flex-column align-items-center gap-7 mb-7">
             <NavLink to="/" className="logoImg mx-auto"><img src="./icon/logo_white.png" alt="logo"/></NavLink>
-            <ul className="d-flex justify-content-between mx-auto gap-6">
+            <ul className="d-flex flex-column flex-lg-row justify-content-between gap-6">
               <li><a href="#" className="px-3 py-2">聯絡我們</a></li>
               <li><a href="#" className="px-3 py-2">常見問題</a></li>
               <li><a href="#" className="px-3 py-2">更多資訊</a></li>
@@ -25,7 +25,7 @@ export default function Footer () {
                 <a href="#"><img src="./icon/Icon_ig.png" alt="ig"/></a>
                 <a href="#"><img src="./icon/Icon_line.png" alt="line"/></a>
               </ul>
-              <p className="">旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
+              <p className="text-copyRight text-center">旅途時光 ©旅途時光股份有限公司 | 統一編號12345678</p>
             </div>
           
         </div>
@@ -33,3 +33,5 @@ export default function Footer () {
     </>
   )
 }
+
+export default Footer;

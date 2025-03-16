@@ -4,7 +4,7 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 
-//客製化
+// color, spacing 客製化
 // 1. 先定義主色與各色階
 $primary: #52A4B1;
 $secondary: #b3a77c;
@@ -17,7 +17,7 @@ $primary-200: #CCE5E9;
 $primary-300: #A3CFD6;
 $primary-400: #7BBAC4;
 $primary-500: #52A4B1;
-$primary-600: #24A8E9;
+$primary-600: #2A8E9E;
 $primary-700: #22727E;
 $primary-800: #19555F;
 $primary-900: #11393F;
@@ -101,6 +101,7 @@ $spacers: (
   8: $spacer * 2.5,  // 2.5rem (新增)
   9: $spacer * 4,  // 4rem (新增)
   10: $spacer * 5,  // 5rem (新增)
+  11: $spacer * 3.5,  // 3.5rem (新增)
 );
 //客製化結束
 
@@ -729,7 +730,7 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-sm:              1.2 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -748,6 +749,7 @@ $h5-font-size:                   $font-size-base * 1.5;  // = 設計稿的 h5 24
 $h6-font-size:                   $font-size-base * 1.25; // = 設計稿的 h6 20px
 $h7-font-size:                   $font-size-base * 2.25; // = 設計稿的 h7 36px
 $h8-font-size:                   $font-size-base * 1.125; // = 設計稿的 h8 18px
+$h9-font-size:                   $font-size-base * 1.875; // = 設計稿的 h9 30px
 // 客製化字級結束
 // scss-docs-end font-variables
 
@@ -758,7 +760,10 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,  // 新增
+  8: $h8-font-size,  // 新增
+  9: $h9-font-size   // 新增
 ) !default;
 // scss-docs-end font-sizes
 

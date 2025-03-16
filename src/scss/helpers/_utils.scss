@@ -1,11 +1,53 @@
 .container {
-  max-width: 1320px;
   padding-left: 12px;
   padding-right: 12px;
 }
 
-@include mobile {
-  .container {
-    max-width: 376px;
+// @include mobile {
+//   .container {
+//     max-width: 376px;
+//   }
+// }
+
+.card {
+  border: 1px solid $primary-600;
+}
+
+// 圖片填滿保持比例
+.object-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 控制內文行數 (避免跑版
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* WebKit 專用 */
+  line-clamp: 1; /* 標準屬性（目前大多數瀏覽器不支援，但未來可能會） */
+  overflow: hidden;
+}
+
+.truncate-2 {
+  -webkit-line-clamp: 2; 
+  line-clamp: 2;
+}
+
+.truncate-4 {
+  -webkit-line-clamp: 4; 
+  line-clamp: 4;
+}
+
+.truncate-12 {
+  -webkit-line-clamp: 12; 
+  line-clamp: 12;
+}
+
+.dropdown-toggle {
+  border:none;
+  &:after {
+    display: none; /* 隱藏 Bootstrap 預設箭頭 */
   }
 }
+

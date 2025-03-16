@@ -12,13 +12,13 @@
 .filters {
   align-self: flex-start; 
 }
-.card {
+.card-list {
   height: 489px;
   border-radius: 8px;
-  &-img-top{
+  .card-img-top{
     height: 212px;
   };
-  &-title{
+  .card-title{
     font-size: 30px;
     line-height: 1.2;
   }

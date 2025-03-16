@@ -5,10 +5,10 @@
 @import "/src/scss/helpers/variables";
 @import "bootstrap/scss/bootstrap";
 
+@import "/src/scss/base/base";
 @import "/src/scss/helpers/mixins";
 @import "/src/scss/helpers/utils";
-@import "/src/scss/base/base";
 
 @import "/src/scss/layout/layout";
-@import "/src/scss/pages/homePage.scss";
 @import "/src/scss/pages/tourList.scss";
+@import "/src/scss/pages/homePage.scss";
